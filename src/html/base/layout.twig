@@ -43,16 +43,16 @@
 							<a href="/technology.html">Technology</a>
 						</li>
 						<li>
-							<a href="/about-us.html">Advertiser</a>
+							<a href="/advertisers.html">Advertisers</a>
 						</li>
 						<li>
-							<a href="/about-us.html">Affiliates</a>
+							<a href="/affiliates.html">Affiliates</a>
 						</li>
 						<li>
-							<a href="/about-us.html">Contacts</a>
+							<a href="/contacts.html">Contacts</a>
 						</li>
 						<li class="login">
-							<a href="/about-us.html">Sign in</a>
+							<a href="/sign-in.html">Sign in</a>
 						</li>
 						
 					</ul>
@@ -67,9 +67,61 @@
 	</main>
 
 	<footer class="footer" role="contentinfo">
-{% block footer %}{% endblock %}
+{% block footer %}
+		<div class="">
+			<div class="row">
+				<div class="logo col-sm-3">
+					<div>
+						<p>About us</p>
+						<p>Lorem ipsum dolor sit amet, eu vix dico diam, ex sit nostrud fabellas. Cum et vidit</p>
+					</div>
+					<div>
+						<p>Our Contacts</p>
+						<p>Phone: 0 800 555 77 88</p>
+						<p>e-mail: cashon@info.com</p>
+						<p>Location: NY, 126 avenue, New York, USA</p>
+					</div>
+				</div>
+				<div class="logo col-sm-1">
+					<div>
+						<p>Info</p>
+						<p>About Us</p>
+						<p>Advertise</p>
+						<p>Monetise</p>
+						<p>Contacts</p>
+					</div>
+				</div>
+				<div class="logo col-sm-2">
+					<div>
+						<p>Policies</p>
+						<p>Terms & Conditions</p>
+						<p>Privecy</p>
+						<p>Term Of Use</p>
+						<p>Security</p>
+					</div>
+				</div>
+				<div class="logo col-sm-3">
+					<div>
+						<p>Follow us</p>
+						<button class=""><span class="fa fa-google-plus"></span></button>
+						<button class=""><span class="fa fa-twitter"></span></button>
+						<button class=""><span class="fa fa-facebook"></span></button>
+						<button class=""><span class="fa fa-instagram"></span></button>
+						<button class=""><span class="fa fa-pinterest"></span></button>
+						<button class=""><span class="fa  fa-tumblr"></span></button>
+					</div>
+					<div>
+						<p>Contact Us</p>
+						<form action="#">
+						<input type="text" name="e-mail" value="enter your e-mail">
+						<input type="submit" value="Send">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}
 	</footer>
-
 	<script src="js/scripts.min.js"></script>
 
 </body>
