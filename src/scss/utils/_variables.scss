@@ -4,7 +4,9 @@
 
 // == Basic parametrs
 
-$base-font-family: Helvetica, Arial, sans-serif !default;
+$base-font-family: 'Chivo', Helvetica, Arial, sans-serif !default;
+
+$second-font-family: 'Biryani', Helvetica, Arial, sans-serif !default;
 
 $base-font-size-px: 16 !default;
 
@@ -45,7 +47,7 @@ $font-size-h4:            $standart-font-size * 1.25 !default;
 $font-size-h5:            $standart-font-size !default;
 $font-size-h6:            $standart-font-size * 0.85 !default;
 
-$headings-font-family:    inherit !default;
+$headings-font-family:    $second-font-family;
 $headings-font-weight:    normal !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;

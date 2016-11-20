@@ -22,3 +22,23 @@
 %ie-sprite {
 	 background-image: url(map-get($sprite, pngPath));
 }
+
+.center {
+	text-align:center;
+}
+ .blue {
+	color: darkslateblue;
+}
+.about-us, .second-a {
+	h1 {
+		font-size: 5rem;
+		color: green;
+		font-style: italic;
+	}
+}
+.second-a {
+	h1 {
+		color: red;
+		font-style: normal;
+	}
+}

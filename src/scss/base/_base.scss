@@ -26,5 +26,5 @@ body {
 	line-height: $base-line-height;
 	color: $text-color;
 	background-color: $body-bg;
-	background: radial-gradient(ellipse at center, $body-bg 0, darken($body-bg, 30%) 80%, darken($body-bg, 40%) 100%);
+	//background: radial-gradient(ellipse at center, $body-bg 0, darken($body-bg, 30%) 80%, darken($body-bg, 40%) 100%);
 }
