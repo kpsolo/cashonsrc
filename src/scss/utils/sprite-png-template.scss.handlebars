@@ -1,0 +1,23 @@
+{
+  // Default options
+  'functions': false,
+  'variableNameTransforms': ['dasherize']
+}
+
+{{#extend "scss"}}
+{{#content "sprites-comment"}}
+// -----------------------------------------------------------------------------
+// PNG Sprite Template
+// -----------------------------------------------------------------------------
+{{/content}}
+{{#content "sprites"}}
+$icons-png: (
+{{#each sprites}}
+	{{strings.name}}_png: (width: {{px.width}}, height: {{px.height}}, backgroundX: {{px.offset_x}}, backgroundY: {{px.offset_y}}),
+{{/each}}
+{{/content}}
+{{#content "spritesheet"}}
+	sprite: (width: {{spritesheet.px.width}}, height: {{spritesheet.px.height}}, pngPath: '{{{spritesheet.escaped_image}}}'),
+);
+{{/content}}
+{{/extend}}

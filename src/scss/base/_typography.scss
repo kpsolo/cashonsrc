@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// Typograph
+// -----------------------------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  margin:0;
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+p {
+	&.first {
+		font-weight: $headings-font-weight;
+	}
+}
+
+ul, ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0 0 25px;
+	p { margin: 0 0 0 20px }
+	footer {
+		background: none;
+		text-align: right;
+		margin-top: 10px;
+	}
+}
+
+time {
+	white-space: nowrap;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+hr {
+	margin-top:    20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eee;
+	clear:both;
+}
+
+/* Links
+   ========================================================================== */
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+
+	&:focus {
+		@include tab-focus;
+	}
+}

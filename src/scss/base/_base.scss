@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// Basic for site
+// -----------------------------------------------------------------------------
+
+/* Body and Blocks
+   ========================================================================== */
+
+*,
+*:before,
+*:after {
+	box-sizing:border-box;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+html {
+	font-size: 100%;
+	min-height: 100vh;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+	font-family:$base-font-family;
+	font-size: $base-font-size;
+	font-weight: $base-font-weight;
+	line-height: $base-line-height;
+	color: $text-color;
+	background-color: $body-bg;
+	background: radial-gradient(ellipse at center, $body-bg 0, darken($body-bg, 30%) 80%, darken($body-bg, 40%) 100%);
+}

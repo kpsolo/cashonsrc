@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// Forms
+// -----------------------------------------------------------------------------
+
+/* Forms
+   ========================================================================== */
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  font-size: ($base-font-size * 1.5);
+  line-height: inherit;
+  border: 0;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+}
+
+input[type="search"] {
+  box-sizing:border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  @include tab-focus;
+}
+input[type="search"] {
+	-webkit-appearance: none;
+}
+
+#{$all-text-inputs}, select {
+	width: 100%;
+}
+
+#{$all-text-inputs-focus}, select:focus {
+	@include custom-tab-focus;
+}

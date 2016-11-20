@@ -1,0 +1,52 @@
+{
+  "name": "New Project",
+  "description": "New Project",
+  "main": "",
+  "authors": [
+    "sdhnik"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "owl.carousel": "^2.0.0-beta.3",
+    "font-awesome": "^4.5.0",
+    "bootstrap-sass": "^3.3.6"
+  },
+  "overrides": {
+    "owl.carousel": {
+      "main": [
+        "dist/owl.carousel.js",
+        "dist/assets/owl.carousel.css",
+        "dist/assets/ajax-loader.gif",
+        "dist/assets/owl.video.play.png"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.svg"
+      ]
+    },
+    "bootstrap-sass": {
+      "main": [
+        "assets/javascripts/bootstrap/collapse.js",
+        "assets/javascripts/bootstrap/transition.js",
+        "assets/stylesheets/bootstrap/_component-animations.scss"
+      ]
+    }
+  }
+}

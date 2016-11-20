@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// Sass Variables
+// -----------------------------------------------------------------------------
+
+// == Basic parametrs
+
+$base-font-family: Helvetica, Arial, sans-serif !default;
+
+$base-font-size-px: 16 !default;
+
+$base-font-size: rem($base-font-size-px) !default;
+
+$standart-font-size: rem(12) !default;
+
+$base-line-height: 1.42857 !default;
+
+$base-font-weight: 300 !default;
+
+$text-color: #333 !default;
+
+$body-bg: #F7F6F0 !default;
+
+$link-color:            darken(#428bca, 6.5%) !default;
+
+$link-hover-color:      darken($link-color, 15%) !default;
+
+$link-hover-decoration: underline !default;
+
+//== Img Sprite Source
+
+@import 'sprite';
+@import 'sprite-png';
+
+$ieSprite: '.ie8' !default;
+$sprite: map-get($icons, sprite) !default;
+$sprite-png: map-get($icons-png, sprite) !default;
+$base-font-size-for-sprite: $base-font-size-px + 0px !default;
+
+//== Typography
+
+$font-size-h1:            $standart-font-size * 2.6 !default;
+$font-size-h2:            $standart-font-size * 2.15 !default;
+$font-size-h3:            $standart-font-size * 1.7 !default;
+$font-size-h4:            $standart-font-size * 1.25 !default;
+$font-size-h5:            $standart-font-size !default;
+$font-size-h6:            $standart-font-size * 0.85 !default;
+
+$headings-font-family:    inherit !default;
+$headings-font-weight:    normal !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+//== Media queries breakpoints
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+$screen-null-max:            ($screen-xs-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+$grid-columns:              12 !default;
+$grid-gutter-width:         30px !default;
+$grid-float-breakpoint:     $screen-sm-min !default;
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+$container-tablet:             (720px + $grid-gutter-width) !default;
+$container-sm:                 $container-tablet !default;
+$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-md:                 $container-desktop !default;
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-lg:                 $container-large-desktop !default;

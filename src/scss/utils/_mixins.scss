@@ -1,0 +1,312 @@
+// -----------------------------------------------------------------------------
+// Sass mixins
+// -----------------------------------------------------------------------------
+
+// 1. Framework grid generation
+// -----------------------------------------------------------------------------
+
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+	$list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+	position: relative;
+	min-height: 1px;
+	padding-left:  ceil(($grid-gutter-width / 2));
+	padding-right: floor(($grid-gutter-width / 2));
+  }
+}
+
+
+@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+	$list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+	float: left;
+  }
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+	.col-#{$class}-#{$index} {
+	  width: percentage(($index / $grid-columns));
+	}
+  }
+  @if ($type == push) and ($index > 0) {
+	.col-#{$class}-push-#{$index} {
+	  left: percentage(($index / $grid-columns));
+	}
+  }
+  @if ($type == push) and ($index == 0) {
+	.col-#{$class}-push-0 {
+	  left: auto;
+	}
+  }
+  @if ($type == pull) and ($index > 0) {
+	.col-#{$class}-pull-#{$index} {
+	  right: percentage(($index / $grid-columns));
+	}
+  }
+  @if ($type == pull) and ($index == 0) {
+	.col-#{$class}-pull-0 {
+	  right: auto;
+	}
+  }
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+	@include calc-grid-column($i, $class, $type);
+  }
+}
+
+@mixin make-grid($class) {
+  @include float-grid-columns($class);
+  @include loop-grid-columns($grid-columns, $class, width);
+  @include loop-grid-columns($grid-columns, $class, pull);
+  @include loop-grid-columns($grid-columns, $class, push);
+  @include loop-grid-columns($grid-columns, $class, offset);
+}
+
+// 2. Grid system
+// -----------------------------------------------------------------------------
+
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left:  ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  @include clearfix;
+}
+
+@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage(($columns / $grid-columns));
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+@mixin make-xs-column-push($columns) {
+  left: percentage(($columns / $grid-columns));
+}
+@mixin make-xs-column-pull($columns) {
+  right: percentage(($columns / $grid-columns));
+}
+
+@mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-sm-min) {
+	float: left;
+	width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-push($columns) {
+  @media (min-width: $screen-sm-min) {
+	left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-pull($columns) {
+  @media (min-width: $screen-sm-min) {
+	right: percentage(($columns / $grid-columns));
+  }
+}
+
+@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-md-min) {
+	float: left;
+	width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-push($columns) {
+  @media (min-width: $screen-md-min) {
+	left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-pull($columns) {
+  @media (min-width: $screen-md-min) {
+	right: percentage(($columns / $grid-columns));
+  }
+}
+
+@mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-lg-min) {
+	float: left;
+	width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-push($columns) {
+  @media (min-width: $screen-lg-min) {
+	left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-pull($columns) {
+  @media (min-width: $screen-lg-min) {
+	right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Style focus
+
+@mixin tab-focus() {
+	outline: thin dotted;
+	outline-offset: -2px;
+}
+
+@mixin custom-tab-focus() {
+	outline: 0 none;
+	border-color: rgba(81, 203, 238, .6);
+	box-shadow: 0 0 3px rgba(81, 203, 238, .6);
+	color: $text-color;
+}
+
+// Pseudo element
+
+@mixin p-el($el, $el-width, $el-height) {
+  @if $el == "before" or $el == "after" {
+    &:#{$el} {
+      content: '';
+      width: $el-width;
+      height: $el-height;
+      @content;
+    }
+  }
+  @if $el == "both" {
+    &:before, &:after {
+      content: '';
+      width: $el-width;
+      height: $el-height;
+      @content;
+    }
+  }
+}
+
+@mixin ie-sprite($icon, $type: all) {
+  $iconMap: icon-attr($icon);
+
+  @if $ieSprite {
+    #{$ieSprite} & {
+      @if $type == all {
+        // Shares the PNG background
+        @extend %ie-sprite;
+      }
+      // Outputs dimensions of icon
+      @if $type == all or $type == size {
+        width: map-get($iconMap, width);
+        height: map-get($iconMap, height);
+      }
+      // Outputs background position
+      @if $type == all or $type == bg {
+        background-position: (map-get($iconMap, x) - 5) (map-get($iconMap, y) - 5);
+      }
+    }
+  }
+}
+
+@mixin sprite($icon, $type: all) {
+  @if $type == all {
+    // Shares the backgrounds
+    @extend %sprite;
+  }
+
+  $iconMap: icon-attr($icon);
+
+  // Outputs dimensions in em
+  @if $type == all or $type == size {
+    width: mq-px2em(map-get($iconMap, width) + 1);
+    height: mq-px2em(map-get($iconMap, height) + 1);
+  }
+
+  // Outputs background position in em
+  @if $type == all or $type == bg {
+    background-position: mq-px2em(map-get($iconMap, x) - 5) mq-px2em(map-get($iconMap, y) - 5);
+  }
+
+  // Add ie fallback
+  @include ie-sprite($icon, $type);
+
+}
+
+@mixin sprite-png($icon, $type: all) {
+  @if $type == all {
+    @extend %sprite-png;
+  }
+
+  $iconMap: icon-png-attr($icon);
+
+  @if $type == all or $type == size {
+    width: map-get($iconMap, width);
+    height: map-get($iconMap, height);
+  }
+
+  @if $type == all or $type == bg {
+    background-position: map-get($iconMap, x) map-get($iconMap, y);
+  }
+
+}
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}

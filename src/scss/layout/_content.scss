@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Basic Content
+// -----------------------------------------------------------------------------
+
+/* Website :: Basic Content
+   ========================================================================== */
+
+.class {
+	&:before {
+		@include sprite(twitter);
+		content: '';
+	}
+
+	&:hover {
+		&:before {
+			@include sprite(twitterHover, bg);
+		}
+	}
+}
+.facebook {
+	@include sprite(facebook);
+}
+.github {
+	@include sprite-png(twitter);
+}

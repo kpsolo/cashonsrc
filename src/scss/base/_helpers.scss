@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// CSS helper classes
+// -----------------------------------------------------------------------------
+
+/* Helpers :: Sprite
+   ========================================================================== */
+
+/// SVG Sprite
+%sprite {
+	display: inline-block;
+	background-image: url(map-get($sprite, svgPath));
+	background-size: mq-px2em(map-get($sprite, width)) mq-px2em(map-get($sprite, height));
+}
+
+%sprite-png {
+	display: inline-block;
+	background-image: url(map-get($sprite-png, pngPath));
+	background-size: map-get($sprite-png, width) map-get($sprite-png, height);
+}
+
+/// PNG Sprite
+%ie-sprite {
+	 background-image: url(map-get($sprite, pngPath));
+}
