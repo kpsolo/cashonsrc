@@ -5,7 +5,35 @@
 /* Website :: Header
    ========================================================================== */
 
-.logo {
-  margin: -58px 0 0 -100px;
-  @include position(absolute, 50% 0 0 50%);
+@media(min-width:992px) {
+  .nav__toggle {
+    display: none;
+  }
+  .collapse {
+    display:block;
+    height: auto !important;
+  }
+}
+
+.nav__menu {
+  text-align: right;
+  margin-top: 30px;
+  @media(max-width:991px) {
+    text-align: center;
+  }
+  li {
+    display:inline-block;
+    vertical-align:top;
+    @media(max-width:991px) {
+      display:block;
+    }
+    a {
+      display:block;
+      padding: 10px 20px;
+    }
+    &.login {
+      border: 1px solid #ccc;
+      border-radius: 20px;
+    }
+  }
 }

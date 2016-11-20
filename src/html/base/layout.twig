@@ -23,18 +23,42 @@
 <body>
 	<header class="header" role="banner">
 {% block header %}
-		<div class="logo">
-			<a href="/">
-				<img src="img/logo.png" alt="Logo">
-			</a>
+		<div class="container">
+			<div class="row">
+				<div class="logo col-sm-2">
+					<a href="/">
+						<img src="img/logo.png" alt="Logo">
+					</a>
+				</div>
+				<nav class="nav col-sm-10" role="navigation">
+					<button class="nav__toggle" data-toggle="collapse" data-target="#nav__menu"><span class="fa fa-bars"></span></button>
+					<ul class="nav__menu collapse" id="nav__menu">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/about-us.html">About Us</a>
+						</li>
+						<li>
+							<a href="/technology.html">Technology</a>
+						</li>
+						<li>
+							<a href="/about-us.html">Advertiser</a>
+						</li>
+						<li>
+							<a href="/about-us.html">Affiliates</a>
+						</li>
+						<li>
+							<a href="/about-us.html">Contacts</a>
+						</li>
+						<li class="login">
+							<a href="/about-us.html">Sign in</a>
+						</li>
+						
+					</ul>
+				</nav>
+			</div>
 		</div>
-		<nav class="nav" role="navigation">
-			<ul>
-				<li>
-					<a href="/about-us.html">About Us</a>
-				</li>
-			</ul>
-		</nav>
 {% endblock %}
 	</header>
 
