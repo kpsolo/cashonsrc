@@ -5,7 +5,7 @@
 /* Website :: Header
    ========================================================================== */
 
-@media(min-width:992px) {
+@media(min-width:1201px) {
   .nav__toggle {
     display: none;
   }
@@ -17,14 +17,13 @@
 
 .nav__menu {
   text-align: right;
-  margin-top: 30px;
-  @media(max-width:991px) {
+  @media(max-width:1200px) {
     text-align: center;
   }
   li {
     display:inline-block;
     vertical-align:top;
-    @media(max-width:991px) {
+    @media(max-width:1200px) {
       display:block;
     }
     a {
@@ -33,7 +32,34 @@
     }
     &.login {
       border: 1px solid #ccc;
-      border-radius: 20px;
+      border-radius: 25px;
     }
   }
 }
+
+.nav {
+  display:inline-block;
+  @media(max-width:1200px) {
+    display:block;
+  }
+  margin-top: 60px;
+  margin-left: 150px;
+  vertical-align:center;
+}
+
+.logo {
+  display:inline-block;
+  @media(max-width:1200px) {
+    display:block;
+  }
+  vertical-align:center;
+  margin-top: 60px;
+	background-image: url(/img/logo.png);
+  height: 53px;
+  width: 236px;
+}
+
+/*.avatar {
+	@include sprite(logo);
+}
+*/
