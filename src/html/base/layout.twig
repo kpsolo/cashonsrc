@@ -15,7 +15,7 @@
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	
-	<link href="https://fonts.googleapis.com/css?family=Biryani:900|Chivo:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link href="css/style.min.css" rel="stylesheet">
 {% endblock %}
 </head>
@@ -25,13 +25,24 @@
 {% block header %}
 		<div class="container">
 			<div class="row">
-				<div class="logo"></div>
+				<div class="col-sm-3">
+					<div class="logo"></div>
+				</div>
 				
-				<nav class="nav" role="navigation">
+				<nav class="nav col-sm-9" role="navigation">
 					<button class="nav__toggle" data-toggle="collapse" data-target="#nav__menu"><span class="fa fa-bars"></span></button>
 					<ul class="nav__menu collapse" id="nav__menu">
-						<li>
+						<li class="has_submenu">
 							<a href="/">Home</a>
+							<ul class ="submenu">
+								<li>
+									<a href="/">Goals</a>
+								</li>
+								<li>
+									<a href="/">Events</a>
+								</li>
+							</ul>
+
 						</li>
 						<li>
 							<a href="/about-us.html">About Us</a>
@@ -65,9 +76,9 @@
 
 	<footer class="footer" role="contentinfo">
 {% block footer %}
-		<div class="">
+		<div class="container">
 			<div class="row">
-				<div class="logo col-sm-3">
+				<div class="col-sm-3">
 					<div>
 						<p>About us</p>
 						<p>Lorem ipsum dolor sit amet, eu vix dico diam, ex sit nostrud fabellas. Cum et vidit</p>
@@ -79,7 +90,7 @@
 						<p>Location: NY, 126 avenue, New York, USA</p>
 					</div>
 				</div>
-				<div class="logo col-sm-1">
+				<div class="col-sm-1">
 					<div>
 						<p>Info</p>
 						<p>About Us</p>
@@ -88,7 +99,7 @@
 						<p>Contacts</p>
 					</div>
 				</div>
-				<div class="logo col-sm-2">
+				<div class="col-sm-2">
 					<div>
 						<p>Policies</p>
 						<p>Terms & Conditions</p>
@@ -97,7 +108,7 @@
 						<p>Security</p>
 					</div>
 				</div>
-				<div class="logo col-sm-3">
+				<div class="col-sm-3">
 					<div>
 						<p>Follow us</p>
 						<button class=""><span class="fa fa-google-plus"></span></button>

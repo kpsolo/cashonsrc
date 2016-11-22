@@ -5,7 +5,16 @@
 /* Website :: Header
    ========================================================================== */
 
-@media(min-width:1201px) {
+.header{
+  position: fixed;
+  z-index: 10;
+  top:0;
+  left:0;
+  right:0;
+  padding: 60px 0px;
+}
+
+@media(min-width:$screen-md-min) {
   .nav__toggle {
     display: none;
   }
@@ -17,49 +26,54 @@
 
 .nav__menu {
   text-align: right;
-  @media(max-width:1200px) {
+  @media(max-width:$screen-md) {
     text-align: center;
   }
   li {
     display:inline-block;
     vertical-align:top;
-    @media(max-width:1200px) {
+    @media(max-width:$screen-md) {
       display:block;
     }
     a {
       display:block;
-      padding: 10px 20px;
+      padding: 12px 14px;
+      font-family:"Montserrat light";
+      font-size:16px;
+      text-decoration: none;
     }
     &.login {
-      border: 1px solid #ccc;
+      a {
+        display:block;
+        padding: 14px 24px;
+        font-family:"Montserrat";
+        font-size:12px;
+      }
+      
+      background-color: #003a7b;
+      border: 0px;
       border-radius: 25px;
+      text-transform: uppercase;
     }
   }
 }
-
-.nav {
-  display:inline-block;
-  @media(max-width:1200px) {
-    display:block;
-  }
-  margin-top: 60px;
-  margin-left: 150px;
-  vertical-align:center;
+.submenu{
+  display: none;
 }
 
 .logo {
   display:inline-block;
-  @media(max-width:1200px) {
+  @media(max-width:$screen-md) {
     display:block;
   }
-  vertical-align:center;
-  margin-top: 60px;
 	background-image: url(/img/logo.png);
   height: 53px;
   width: 236px;
 }
 
+
 /*.avatar {
 	@include sprite(logo);
 }
 */
+

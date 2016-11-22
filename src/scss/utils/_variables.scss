@@ -4,9 +4,9 @@
 
 // == Basic parametrs
 
-$base-font-family: 'Chivo', Helvetica, Arial, sans-serif !default;
+$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif !default;
 
-$second-font-family: 'Biryani', Helvetica, Arial, sans-serif !default;
+$second-font-family: 'Montserrat', Helvetica, Arial, sans-serif !default;
 
 $base-font-size-px: 16 !default;
 
@@ -18,7 +18,7 @@ $base-line-height: 1.42857 !default;
 
 $base-font-weight: 300 !default;
 
-$text-color: #AAA !default;
+$text-color: #fbfbfb !default;
 
 $body-bg: #111d2c !default;
 
@@ -88,3 +88,4 @@ $container-desktop:            (940px + $grid-gutter-width) !default;
 $container-md:                 $container-desktop !default;
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 $container-lg:                 $container-large-desktop !default;
+

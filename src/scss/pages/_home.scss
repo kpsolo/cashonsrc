@@ -4,3 +4,100 @@
 
 /* Website :: Home page
    ========================================================================== */
+.home-slider{
+  position: relative;
+  margin: 0 auto;
+  z-index:1;
+    &:before {
+        content: '';
+        @include position(absolute, 0);
+        background-image: url(/img/slider-1.png);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        //opacity: .42;
+        z-index:0;
+    }
+    &-container {
+        position: relative;
+        padding-top: 120px;
+        height: 100vh;
+        z-index: 2;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+$hexagon-bg: rgba(7, 14, 25, .369);
+.hexagon {
+	margin: 180px auto;
+	width: 560px;
+  	height: 320px;
+    background-color: $hexagon-bg;
+    position: relative;
+    z-index:0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -160px;
+        border-bottom: 160px solid $hexagon-bg;
+        border-left: 280px solid transparent;
+        border-right: 280px solid transparent;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -160px;
+        border-top: 160px solid $hexagon-bg;
+        border-left: 280px solid transparent;
+        border-right: 280px solid transparent;
+    }
+    &-text {
+        .h1{
+            font-size: 14px;
+            font-family: "Montserrat";
+            color: rgb(0, 133, 189);
+            text-transform: uppercase;
+            line-height: 5;
+            text-align: center;
+        }
+        .h2{
+            font-size: 90px;
+            font-family: "Montserrat SemiBold";
+            color: rgb(251, 251, 251);
+            text-align: center;
+        }
+        .h3{
+            font-size: 24px;
+            font-family: "Montserrat light";
+            color: rgb(251, 251, 251);
+            text-align: center;
+        }
+        a {
+            width: 215px;
+            height: 68px;
+            margin: 50px auto;
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-size: 16px;
+            font-family: "Montserrat SemiBold";
+            background-color: rgb(0, 58, 123);
+            border: 0px;
+            border-radius: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+
+
