@@ -15,7 +15,6 @@
         background-position: center top;
         background-repeat: no-repeat;
         background-size: cover;
-        //opacity: .42;
         z-index:0;
     }
     &-container {
@@ -32,72 +31,172 @@
 
 $hexagon-bg: rgba(7, 14, 25, .369);
 .hexagon {
-	margin: 180px auto;
-	width: 560px;
-  	height: 320px;
-    background-color: $hexagon-bg;
-    position: relative;
-    z-index:0;
+    width: 580px;
+    height: 680px;
+	margin: auto;
+	margin-top: -50px;
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotate(120deg);
+    
+    .hex-l2 {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        transform: rotate(-60deg);
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: -160px;
-        border-bottom: 160px solid $hexagon-bg;
-        border-left: 280px solid transparent;
-        border-right: 280px solid transparent;
-    }
-
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -160px;
-        border-top: 160px solid $hexagon-bg;
-        border-left: 280px solid transparent;
-        border-right: 280px solid transparent;
-    }
-    &-text {
-        .h1{
-            font-size: 14px;
-            font-family: "Montserrat";
-            color: rgb(0, 133, 189);
-            text-transform: uppercase;
-            line-height: 5;
-            text-align: center;
-        }
-        .h2{
-            font-size: 90px;
-            font-family: "Montserrat SemiBold";
-            color: rgb(251, 251, 251);
-            text-align: center;
-        }
-        .h3{
-            font-size: 24px;
-            font-family: "Montserrat light";
-            color: rgb(251, 251, 251);
-            text-align: center;
-        }
-        a {
-            width: 215px;
-            height: 68px;
-            margin: 50px auto;
+        .hex-text {
+            width: 100%;
+            height: 100%;
             display:flex;
+            align-items: center;
             justify-content: center;
             flex-direction: column;
-            align-items: center;
-            font-size: 16px;
-            font-family: "Montserrat SemiBold";
-            background-color: rgb(0, 58, 123);
-            border: 0px;
-            border-radius: 50px;
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-    }
+            visibility: visible;
+            transform: rotate(-60deg);
+            background-color: $hexagon-bg;
+            padding-top: 70px;
+            
+            .h1{
+                font-size: 14px;
+                font-family: "Montserrat";
+                color: rgb(0, 133, 189);
+                text-transform: uppercase;
+                line-height: 5;
+                text-align: center;
+                }
+           
+            .h2{
+                font-size: 90px;
+                font-family: "Montserrat SemiBold";
+                color: rgb(251, 251, 251);
+                text-align: center;
+            }
 
+            .h3{
+                font-size: 24px;
+                font-family: "Montserrat light";
+                color: rgb(251, 251, 251);
+                text-align: center;
+            }
+
+            a {
+                width: 215px;
+                height: 68px;
+                margin-top: 70px;
+                display:flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                font-size: 16px;
+                font-family: "Montserrat SemiBold";
+                background-color: rgb(0, 58, 123);
+                border: 0px;
+                border-radius: 50px;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+            .bg-img {
+                background-image: url(/img/slider-1.png);
+            }
+    }
 }
 
+.features {
+    background-color: rgb(240, 243, 248);
 
+    .prem {
+        background-image: url(/img/premiumquality.png);
+    }
+    .prof {
+        background-image: url(/img/professionalteam.png);
+    }
+    .inn {
+        background-image: url(/img/innovativesolutions.png);
+    }
+    .card {
+        z-index: 1;
+        position: relative;
+        top: -60px;
+        margin: 8px;
+        display:inline-block;
+        background-color: rgb(255, 255, 255);
+        width: 360px;
+        height: 344px;
+        overflow: hidden;
+        background-position: center 30%;
+        background-repeat: no-repeat;
 
+        .h1 {
+            z-index: 1;
+            color: rgb(31, 30, 30);
+            font-size: 24px;
+            font-family: "Montserrat";
+            text-align: center;
+            padding-top: 50%;
+        }
 
+        p {
+            position: absolute;
+            z-index: 1;
+            padding: 5px 20px;
+            color: rgb(31, 30, 30);
+            font-size: 15px;
+            font-family: "Open Sans";
+            text-align: center;   
+        }
+
+        .num {
+            //z-index: 1;
+            color: rgb(246, 248, 251);
+            font-size: 152px;
+            font-family: "Open Sans Extrabold";
+            position: absolute;
+            top: 53%;
+            left: -30px;
+            width: 200px;
+            height: 200px; 
+        }
+    }
+}
+
+.maingoal {
+    background-color: rgb(240, 243, 248);
+    height: 850px;
+
+    .photo {
+        display: inline-block;
+        width: 40%;
+        height: 60%;
+
+        background-image: url(/img/maingoal.png);
+        background-size: cover;
+        //background-position: center 30%;
+        background-repeat: no-repeat;
+
+    }
+    .text {
+        display: inline-block;
+        width: 50%;
+        .h1 {
+            z-index: 1;
+            color: rgb(31, 30, 30);
+            font-size: 24px;
+            font-family: "Montserrat";
+            text-align: center;
+            padding-top: 50%;
+        }
+
+        p {
+        
+            z-index: 1;
+            padding: 5px 20px;
+            color: rgb(31, 30, 30);
+            font-size: 15px;
+            font-family: "Open Sans";
+            text-align: center;   
+        }
+    }
+}
