@@ -28,19 +28,56 @@
 	margin: auto;
 	margin-top: -50px;
 }
- .blue {
-	color: darkslateblue;
+
+.main-h1 {
+	font-size: 14px;
+	font-family: "Montserrat";
+	color: rgb(0, 133, 189);
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
 }
-.about-us, .second-a {
-	h1 {
-		font-size: 5rem;
-		color: green;
-		font-style: italic;
-	}
+
+.main-h2 {
+	font-size: 48px;
+	font-family: "Montserrat";
+	color: rgb(31, 30, 30);
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 20px;
 }
-.second-a {
-	h1 {
-		color: red;
-		font-style: normal;
+
+.main-p {
+	padding: 20px 20px;
+	font-size: 16px;
+	font-family: "Open Sans";
+	color: rgb(108, 108, 108);
+	text-align: center;
+}
+
+.start-now {
+	width: 100%;
+	height: 100%;
+	padding-top: 40px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	visibility: visible;
+	a {
+		width: 215px;
+		height: 68px;
+		display:flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		font-size: 16px;
+		font-family: "Montserrat SemiBold";
+		background-color: rgb(0, 58, 123);
+		border: 0px;
+		border-radius: 50px;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
 	}
 }
