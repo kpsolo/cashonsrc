@@ -11,7 +11,12 @@
   top:0;
   left:0;
   right:0;
-  padding: 60px 0px;
+  padding: 40px 0px;
+  background-color: rgba(7, 14, 25, .369);
+  @media(max-width:$screen-md) {
+    text-align: center;
+  background-color: rgba(7, 14, 25, .0);
+  }
 }
 
 @media(min-width:$screen-md-min) {
@@ -36,6 +41,11 @@
       display:block;
       width: 100%;
     }
+    &:hover {
+      border: 0px;
+      border-radius: 25px;
+      background-color: rgb(2, 48, 99);
+    }
     a {
       display:block;
       padding: 12px 14px;
@@ -49,6 +59,11 @@
         padding: 14px 24px;
         font-family:"Montserrat";
         font-size:12px;
+        &:hover {
+          border: 0px;
+          border-radius: 25px;
+          background-color: rgb(2, 48, 99);
+        } 
       }
       
       background-color: #003a7b;
@@ -61,17 +76,6 @@
 .submenu{
   display: none;
 }
-
-.logo {
-  display:inline-block;
-  @media(max-width:$screen-md) {
-    display:block;
-  }
-	background-image: url(/img/logo.png);
-  height: 53px;
-  width: 236px;
-}
-
 
 /*.avatar {
 	@include sprite(logo);

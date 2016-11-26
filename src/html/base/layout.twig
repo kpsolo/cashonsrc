@@ -76,56 +76,43 @@
 
 	<footer class="footer" role="contentinfo">
 {% block footer %}
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3">
-					<div>
-						<p>About us</p>
-						<p>Lorem ipsum dolor sit amet, eu vix dico diam, ex sit nostrud fabellas. Cum et vidit</p>
-					</div>
-					<div>
-						<p>Our Contacts</p>
-						<p>Phone: 0 800 555 77 88</p>
-						<p>e-mail: cashon@info.com</p>
-						<p>Location: NY, 126 avenue, New York, USA</p>
-					</div>
+		<div class="container footer-p">
+			<div class="col-sm-4">
+				<div class="logo footer-h1"></div>
+				<div class="footer-h1">Our Contacts</div>
+				<div class="footer-p">Phone: 0 800 555 77 88</div>
+				<div class="footer-p">e-mail: cashon@info.com</div>
+				<div class="footer-p">Location: NY, 126 avenue, New York, USA</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="footer-h1">Info</div>
+				<a href="/about-us.html">About Us</a>
+				<a href="/advertisers.html">Advertise</a>
+				<a href="/">Monetise</a>
+				<a href="/contacts.html">Contacts</a>
+			</div>
+			<div class="col-sm-2">
+				<div class="footer-h1">Policies</div>
+				<a href="/">Terms & Conditions</a>
+				<a href="/">Privecy</a>
+				<a href="/">Term Of Use</a>
+				<a href="/">Security</a>
+			</div>
+			<div class="col-sm-4">
+				<div class="footer-h1">Follow us</div>
+				<div class="social">
+					<a href="/" class="g-plus"><span class="fa fa-google-plus"></span></a>
+					<a href="/"><span class="fa fa-twitter"></span></a>
+					<a href="/"><span class="fa fa-facebook"></span></a>
+					<a href="/"><span class="fa fa-instagram"></span></a>
+					<a href="/"><span class="fa fa-pinterest"></span></a>
+					<a href="/"><span class="fa  fa-tumblr"></span></a>
 				</div>
-				<div class="col-sm-1">
-					<div>
-						<p>Info</p>
-						<p>About Us</p>
-						<p>Advertise</p>
-						<p>Monetise</p>
-						<p>Contacts</p>
-					</div>
-				</div>
-				<div class="col-sm-2">
-					<div>
-						<p>Policies</p>
-						<p>Terms & Conditions</p>
-						<p>Privecy</p>
-						<p>Term Of Use</p>
-						<p>Security</p>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div>
-						<p>Follow us</p>
-						<button class=""><span class="fa fa-google-plus"></span></button>
-						<button class=""><span class="fa fa-twitter"></span></button>
-						<button class=""><span class="fa fa-facebook"></span></button>
-						<button class=""><span class="fa fa-instagram"></span></button>
-						<button class=""><span class="fa fa-pinterest"></span></button>
-						<button class=""><span class="fa  fa-tumblr"></span></button>
-					</div>
-					<div>
-						<p>Contact Us</p>
-						<form action="#">
-						<input type="text" name="e-mail" value="enter your e-mail">
-						<input type="submit" value="Send">
-						</form>
-					</div>
-				</div>
+				<div class="footer-h1">Contact Us</div>
+					<form action="#" class="form">
+					<input type="text" name="e-mail" value="enter your e-mail">
+					<input type="submit" value="Send" class="send">
+				</form>
 			</div>
 		</div>
 {% endblock %}

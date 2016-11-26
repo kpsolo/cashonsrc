@@ -96,14 +96,15 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     background-color: rgb(240, 243, 248);
 
     .prem {
-        background-image: url(/img/premiumquality.png);
+        background-image: url(/img/feature-1.svg);
     }
     .prof {
-        background-image: url(/img/professionalteam.png);
+        background-image: url(/img/feature-2.svg);
     }
     .inn {
-        background-image: url(/img/innovativesolutions.png);
+        background-image: url(/img/feature-3.svg);
     }
+
     .card {
         z-index: 1;
         position: relative;
@@ -116,6 +117,8 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         overflow: hidden;
         background-position: center 30%;
         background-repeat: no-repeat;
+        background-size: 66px 58px;
+
 
         .h1 {
             z-index: 1;
@@ -178,7 +181,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     background-color: rgb(255, 255, 255);
     background-image: url(/img/whomakes.png);
     background-size: 50%;
-    text-align: right;
+    text-align: left;
     @media(max-width:$screen-md-min) {
         background-size: auto;
         text-align: center;
@@ -208,7 +211,6 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         vertical-align:bottom;
         border-width: 1px 0 0 0;
         border-color: rgb(243, 243, 243);
-//        border-color: rgb(43, 43, 43);
         border-style: solid;
         a {
             width: 50%;
@@ -224,9 +226,273 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             text-align: center;
             text-transform: uppercase;
             text-decoration: none;
+
+            &:hover {
+                color: rgb(0, 133, 189);
+            }
         }
-        a:hover {
-            color: rgb(0, 133, 189);
+    }
+}
+
+.signup {
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index:0;
+    background-image: url(/img/bodybg.png);
+    position: relative;
+    &:before {
+        content:'';
+        @include position(absolute, 0);
+        background-color: rgba(4, 25, 49, .82);
+    }
+    &-content {
+        position: relative;
+        z-index:1;
+        //width: auto;
+        text-align: center;
+    }
+
+    .text {
+        display: inline-block;
+        vertical-align:top;
+        width: 40%;
+        padding: 5% 0;
+        @media(max-width:$screen-md-min) {
+            width: 100%;
         }
+
+        .main-h2 {
+            font-size: 36px;
+            font-family: "Montserrat SemiBold";
+            color: rgb(251, 251, 251);
+            text-align: left;
+            @media(max-width:$screen-md-min) {
+                text-align: center;
+            }
+            padding: 0px 0px;
+        }
+        .main-p {
+            color: rgb(194, 194, 194);
+            text-align: left;
+            padding: 10px 0px;
+            @media(max-width:$screen-md-min) {
+                text-align: center;
+                padding: 10px 5%;
+            }
+        }
+
+    }
+
+    .start-now {
+        width: auto;
+        padding: 7% 4%;
+        vertical-align:top;
+        display: inline-block;
+        @media(max-width:$screen-md-min) {
+            padding: 2% auto;
+        }
+    }
+    
+}
+
+.events {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 100px 0;
+    &-content {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+    }
+    @media(max-width:$screen-md-min) {
+        width: 100%;
+        padding: 50px 0;
+    }
+
+    $schedule-meet-bg:rgb(240, 243, 248);
+    .schedule-meet {
+        position: relative;
+        display: inline-block;
+        vertical-align:top;
+        text-align: center;
+        margin-left: 10%;
+        width: 35%;
+        background-color: $schedule-meet-bg;
+        background-image: url(/img/events.png);
+        background-position: center 10%;
+        background-size: 67px 78px; 
+        background-repeat: no-repeat;
+        
+        @media(max-width:$screen-md-min) {
+            width: 100%;
+            margin-left: 0;
+        }
+        &:after {
+            content: ''; 
+            position: absolute;
+            top: 48%;
+            right: -20px;
+            border: 10px solid transparent;
+            border-left: 10px solid $schedule-meet-bg;
+        }
+
+    }
+
+    .schedule-plan {
+        display: inline-block;
+        vertical-align:top;
+        margin-right: 10%;
+        width: 40%;
+        @media(max-width:$screen-md-min) {
+            width: 100%;
+            margin-right: 0;
+        }
+        div {
+            width: 100%;
+            height: 80px;
+            display: block;
+            padding: 0 0;
+            margin: 0 0;
+            div {
+                vertical-align:top;
+                margin: 0 0;
+                width: 49%;
+                height: 100%;
+                display: inline-block;
+            }
+        }
+        .event-p {
+            padding: 20px 30px;
+            font-size: 12px;
+            font-family: "Montserrat";
+            color: rgb(126, 126, 126);
+            text-transform: uppercase;
+       }
+        .text-left {
+            text-align: left;
+        }
+        .text-right {
+            text-align: right;
+            border-right: 3px solid rgb(240, 243, 248);
+        }
+
+        .e-last, .e-next {
+            position: relative;
+            &:after {
+                content: ''; 
+                position:absolute;
+                width: 34px;
+                height: 42px;
+                right: -17.5px;
+                top:0;
+                bottom: 0;
+                margin:auto;
+                background-image: url(/img/event-last.svg);
+                background-size: 34px 42px;
+                background-position: right center;
+                background-origin: border-box;
+                background-repeat: no-repeat;
+            }
+           
+        }
+        .e-next {
+            &:after {
+                background-image: url(/img/event-next.svg);
+            }
+        }
+    }
+
+    .event-h1 {
+        padding-top: 30%;
+        font-size: 12px;
+        font-family: "Montserrat";
+        color: rgb(126, 126, 126);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    .event-h2 {
+        padding: 5px 0;
+        color: rgb(31, 30, 30);
+        font-size: 30px;
+        font-family: "Montserrat";
+        color: rgb(0, 58, 123);
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .event-p {
+        font-size: 15px;
+        font-family: "Montserrat Light";
+        color: rgba(101, 101, 101, 0.761);
+        text-align: center;
+    }
+
+    .start-now {
+        width: auto;
+        padding: 7% 4%;
+        vertical-align:top;
+        display: inline-block;
+        @media(max-width:$screen-md-min) {
+            padding: 2% auto;
+        }
+        a {
+            width: 226px;
+            height: 52px;
+      		font-size: 14px;
+        }
+    }
+    
+}
+
+.partners {
+    z-index:0;
+    position: relative;
+    background-color: rgb(247, 249, 251);
+
+    &-content {
+        position: relative;
+        z-index:1;
+        margin: auto 0;
+        padding: 3%;
+        text-align: center;
+        a {
+            position: relative;
+            display: inline-block;
+            vertical-align:top;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 200px;
+            height: 100px;
+            background-position: center; 
+            opacity: 0.4;
+            background-repeat: no-repeat;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+        .partner-1 {
+            background-image: url(/img/partner-unique-1.png);
+        }
+        .partner-2 {
+            background-image: url(/img/partner-unique-2.png);
+        }
+        .partner-3 {
+            background-image: url(/img/partner-mountain.png);
+        }
+        .partner-4 {
+            background-image: url(/img/partner-unique-3.png);
+        }
+        .partner-5 {
+            background-image: url(/img/partner-strong.png);
+        }
+        .partner-6 {
+            background-image: url(/img/partner-special.png);
+        }
+            
     }
 }
