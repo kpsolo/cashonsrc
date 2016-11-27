@@ -180,13 +180,13 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 .whomakes {
     background-color: rgb(255, 255, 255);
     background-image: url(/img/whomakes.png);
+    background-repeat: no-repeat;
     background-size: 50%;
     text-align: left;
     @media(max-width:$screen-md-min) {
         background-size: auto;
         text-align: center;
     }
-    background-repeat: no-repeat;
 
     .photo {
         display: inline-block;
@@ -200,7 +200,6 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         vertical-align:top;
         width: 48%;
         padding-top: 5%;
-//        padding: 0% 4%;
         @media(max-width:$screen-md-min) {
             width: 100%;
         }
@@ -236,11 +235,11 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 
 .signup {
     background-attachment: fixed;
+    background-image: url(/img/bodybg.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     z-index:0;
-    background-image: url(/img/bodybg.png);
     position: relative;
     &:before {
         content:'';
@@ -250,7 +249,6 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     &-content {
         position: relative;
         z-index:1;
-        //width: auto;
         text-align: center;
     }
 

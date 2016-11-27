@@ -4,3 +4,314 @@
 
 /* Website :: About Us page
    ========================================================================== */
+.about-h1 {
+	font-size: 14px;
+	font-family: "Montserrat";
+    color: rgb(0, 133, 189);
+	font-weight: normal;
+}
+
+.about-h2 {
+	font-size: 60px;
+	font-family: "Montserrat semiBold";
+	color: rgb(251, 251, 251);
+	padding-bottom: 20px;
+}
+
+.current-link{
+  position: relative;
+  margin: 0 auto;
+  z-index:1;
+    &:before {
+        content: '';
+        @include position(absolute, 0);
+        background-image: url(/img/slider-1.png);
+        background-position: center 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:0;
+    }
+    &-container {
+        position: relative;
+        padding-top: 120px;
+        height: 350px;
+        z-index: 2;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.whoweare {
+    background-color: rgb(255, 255, 255);
+    background-image: url(/img/bg-whoweare.png);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    @media(max-width:$screen-md-min) {
+        background-size: auto;
+        text-align: center;
+    }
+
+    .photo {
+        display: inline-block;
+        vertical-align:top;
+        width: 43%;
+        height: 100px;
+    }
+
+    .text {
+        display: inline-block;
+        vertical-align:top;
+        width: 38%;
+        padding: 10% 40px;
+        @media(max-width:$screen-md-min) {
+            width: 100%;
+        }
+        .main-h1 {
+            text-align: left;
+        }
+
+        .main-h2 {
+            text-align: left;
+        }
+
+        .main-p {
+            padding: 20px 0px;
+            text-align: left;
+        }
+        .start-now {
+            display:block;
+            @media(max-width:$screen-md-min) {
+                display:flex;
+            }
+        }         
+    }
+}
+
+
+
+.teamof {
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/bg-teamof.png);
+    position: relative;
+    &:before {
+        content:'';
+        @include position(absolute, 0);
+        background-color: rgba(4, 25, 49, .82);
+    }
+    &-content {
+        padding: 5% 10px;
+        position: relative;
+        z-index:1;
+        text-align: center;
+    }
+
+    .text {
+        display: inline-block;
+        vertical-align:top;
+        width: 62%;
+        @media(max-width:$screen-md-min) {
+            width: 100%;
+        }
+
+        .main-h2 {
+            font-size: 36px;
+            font-family: "Montserrat SemiBold";
+            color: rgb(251, 251, 251);
+            text-align: left;
+            @media(max-width:$screen-md-min) {
+                text-align: center;
+            }
+            padding: 0px 0px;
+        }
+        .main-p {
+            color: rgb(194, 194, 194);
+            text-align: left;
+            padding: 10px 0px;
+            @media(max-width:$screen-md-min) {
+                text-align: center;
+                padding: 10px 5%;
+            }
+        }
+
+    }
+
+    .start-now {
+        width: auto;
+        padding: 7% 4%;
+        vertical-align:top;
+        display: inline-block;
+        @media(max-width:$screen-md-min) {
+            padding: 2% auto;
+        }
+    }
+    
+}
+
+.meet-team {
+    background-color: rgb(255, 255, 255);
+
+    @media(max-width:$screen-md-min) {
+        background-size: auto;
+        text-align: center;
+    }
+
+    &-content {
+        display: inline-block;
+        vertical-align:top;
+        width: 100%;
+        padding: 5% 40px;
+        @media(max-width:$screen-md-min) {
+            width: 100%;
+        }
+        .hexgrid{
+///////////////////////////////////////////////////////////////
+            .grid {
+                padding: 1% 2%;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+
+            .grid--item {
+                position: relative;
+                margin: 4% 4%;
+                width: 270px;
+                float: left;
+                overflow: hidden;
+                
+                &:before {
+                    display: block;
+                    padding-top: 120%;
+                    content: '';
+                }
+                &:nth-child(1) {
+                    margin-left: 22%;
+                }
+                
+                &:nth-child(3) {
+                    margin-left: 5%;
+                }
+                @media(max-width:$screen-md-min) {
+                    &:nth-child(n) {
+                        width: 100%;
+                        margin: 10% auto;
+                        display: block;
+                    }
+                }
+            }
+
+            .img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 300px;
+                width: 270px;
+                margin: 0 auto;
+                background-position: center center;
+                background-size: cover;
+                overflow: hidden;
+                -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    content: '';
+                    opacity: 0;
+                    transition: opacity 0.5s;
+                }
+
+                &:before {
+                    background: rgba(rgb(6, 26, 48), 0.902);
+                }
+            }
+
+            .container { 
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 300px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;                
+                text-align: center;
+                opacity: 0;
+                -webkit-shape-outside:   polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+                shape-outside:   polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            }
+
+            h2 {
+                font-size: 24px;
+                font-family: "Montserrat";
+                color: rgb(31, 30, 30);
+                text-align: center;
+                
+                &:before,
+                &:after {
+                    display: inline-block;
+                    background: turquoise;
+                    content: '';
+                    vertical-align: middle;
+                }
+            }
+
+            .desc {
+                z-index: 2;
+                text-align: center;
+                font-size: 16px;
+                font-family: "Open Sans";
+                color: rgb(132, 132, 132);
+                a {
+                    width: 42px;
+                    height: 42px;
+                    display:flex;
+                    float: left;
+                    margin: 7px;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: rgba(249, 247, 245, .11);
+                    border: 0px;
+                    border-radius: 50%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+                }
+                .email {
+                    background-image: url(/img/close-envelope.svg);
+                }
+                .skype {
+                    background-image: url(/img/skype.svg);
+                }
+                .linkedln {
+                    background-image: url(/img/linkedin.svg);
+                }
+            }
+
+            .grid--item:hover {
+
+                .img:before,
+                .img:after,
+                .container { opacity: 1; }
+                
+              //  .container { transform: translate(-50%, -80%) scale(1); }
+            }
+
+///////////////////////////////////////////////////////////////
+        }  
+    }
+}

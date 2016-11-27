@@ -41,7 +41,19 @@
 	margin-top: -50px;
 }
 
-.main-h1 {
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.main-h1, .about-h1 {
 	font-size: 14px;
 	font-family: "Montserrat";
 	color: rgb(0, 133, 189);
@@ -50,16 +62,16 @@
 	text-align: center;
 }
 
-.main-h2 {
+.main-h2, .about-h1 {
 	font-size: 48px;
 	font-family: "Montserrat";
 	color: rgb(31, 30, 30);
 	font-weight: bold;
 	text-align: center;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 }
 
-.main-p {
+.main-p, .about-p {
 	padding: 20px 20px;
 	font-size: 16px;
 	font-family: "Open Sans";
