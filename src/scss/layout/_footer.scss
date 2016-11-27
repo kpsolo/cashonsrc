@@ -17,9 +17,9 @@
             padding: 0px 8px;
             display: inline-block;
             text-decoration: none;
-        }
-        .g-plus {
-            color: rgb(0, 133, 189);
+            &:hover, &:focus {
+                color: rgb(0, 133, 189);
+            }
         }
     }
     .form {
