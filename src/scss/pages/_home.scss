@@ -31,14 +31,16 @@
 
 $hexagon-bg: rgba(7, 14, 25, .369);
 .hexagon {
-    width: 580px;
-    height: 680px;
+    width: 66vh;
+    height: 80vh;
 	margin: auto;
 	margin-top: -50px;
     overflow: hidden;
     visibility: hidden;
     transform: rotate(120deg);
-    
+    @media(max-width: 767px) {
+        width: 100%;
+    }
     .hex-l2 {
         overflow: hidden;
         width: 100%;
@@ -56,26 +58,27 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             transform: rotate(-60deg);
             background-color: $hexagon-bg;
             padding-top: 70px;
-            
-            .h1{
+
+            .h1 {
                 font-size: 14px;
-                font-family: "Montserrat";
+                font-family: $second-font-family;
                 color: rgb(0, 133, 189);
                 text-transform: uppercase;
                 line-height: 5;
                 text-align: center;
                 }
-           
-            .h2{
-                font-size: 90px;
-                font-family: "Montserrat SemiBold";
+
+            .h2 {
+                font-size: 11vh;
+                font-family: $second-font-family;
+                font-weight: bold;
                 color: rgb(251, 251, 251);
                 text-align: center;
             }
 
             .h3{
-                font-size: 24px;
-                font-family: "Montserrat light";
+                font-size: 22px;
+                font-family: $second-font-family;
                 color: rgb(251, 251, 251);
                 text-align: center;
             }
@@ -109,22 +112,27 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         z-index: 1;
         position: relative;
         top: -60px;
-        margin: 8px;
-        display:inline-block;
         background-color: rgb(255, 255, 255);
-        width: 360px;
+        width: 100%;
         height: 344px;
+        margin: 0 -7px;
         overflow: hidden;
-        background-position: center 30%;
+        background-position: center 25%;
         background-repeat: no-repeat;
         background-size: 66px 58px;
-
+        @media(max-width: 992px) {
+            background-position: center 12%;
+        }
+        @media(max-width: 767px) {
+            margin-bottom: 20px;
+            background-position: center 20%;
+        }
 
         .h1 {
             z-index: 1;
             color: rgb(31, 30, 30);
             font-size: 24px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             text-align: center;
             padding-top: 50%;
         }
@@ -135,20 +143,18 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             padding: 5px 20px;
             color: rgb(31, 30, 30);
             font-size: 15px;
-            font-family: "Open Sans";
-            text-align: center;   
+            text-align: center;
         }
 
         .num {
-            //z-index: 1;
             color: rgb(246, 248, 251);
             font-size: 152px;
-            font-family: "Open Sans Extrabold";
+            font-weight: bold;
             position: absolute;
             top: 53%;
             left: -30px;
             width: 200px;
-            height: 200px; 
+            height: 200px;
         }
     }
 }
@@ -220,7 +226,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             align-items: center;
             color: rgb(126, 126, 126);
             font-size: 14px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             text-transform: uppercase;
             text-align: center;
             text-transform: uppercase;
@@ -263,7 +269,8 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 
         .main-h2 {
             font-size: 36px;
-            font-family: "Montserrat SemiBold";
+            font-family: $second-font-family;
+            font-weight: bold;
             color: rgb(251, 251, 251);
             text-align: left;
             @media(max-width:$screen-md-min) {
@@ -292,7 +299,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             padding: 2% auto;
         }
     }
-    
+
 }
 
 .events {
@@ -320,15 +327,15 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         background-color: $schedule-meet-bg;
         background-image: url(/img/events.png);
         background-position: center 10%;
-        background-size: 67px 78px; 
+        background-size: 67px 78px;
         background-repeat: no-repeat;
-        
+
         @media(max-width:$screen-md-min) {
             width: 100%;
             margin-left: 0;
         }
         &:after {
-            content: ''; 
+            content: '';
             position: absolute;
             top: 48%;
             right: -20px;
@@ -364,7 +371,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         .event-p {
             padding: 20px 30px;
             font-size: 12px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             color: rgb(126, 126, 126);
             text-transform: uppercase;
        }
@@ -379,7 +386,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         .e-last, .e-next {
             position: relative;
             &:after {
-                content: ''; 
+                content: '';
                 position:absolute;
                 width: 34px;
                 height: 42px;
@@ -393,7 +400,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 background-origin: border-box;
                 background-repeat: no-repeat;
             }
-           
+
         }
         .e-next {
             &:after {
@@ -405,25 +412,25 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     .event-h1 {
         padding-top: 30%;
         font-size: 12px;
-        font-family: "Montserrat";
+        font-family: $second-font-family;
         color: rgb(126, 126, 126);
         text-transform: uppercase;
         text-align: center;
     }
-    
+
     .event-h2 {
         padding: 5px 0;
         color: rgb(31, 30, 30);
         font-size: 30px;
-        font-family: "Montserrat";
+        font-family: $second-font-family;
         color: rgb(0, 58, 123);
         font-weight: bold;
         text-align: center;
     }
-    
+
     .event-p {
-        font-size: 15px;
-        font-family: "Montserrat Light";
+        font-size: 14px;
+        font-family: $second-font-family;
         color: rgba(101, 101, 101, 0.761);
         text-align: center;
     }
@@ -442,7 +449,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
       		font-size: 14px;
         }
     }
-    
+
 }
 
 .partners {
@@ -465,7 +472,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             padding: 0;
             width: 200px;
             height: 100px;
-            background-position: center; 
+            background-position: center;
             opacity: 0.4;
             background-repeat: no-repeat;
             &:hover {
@@ -491,6 +498,6 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         .partner-6 {
             background-image: url(/img/partner-special.png);
         }
-            
+
     }
 }

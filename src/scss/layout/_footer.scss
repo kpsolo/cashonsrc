@@ -15,8 +15,8 @@
         a {
             font-size: 18px;
             padding: 0px 8px;
-            display: inline-block;  
-            text-decoration: none;      
+            display: inline-block;
+            text-decoration: none;
         }
         .g-plus {
             color: rgb(0, 133, 189);
@@ -35,7 +35,7 @@
             border-width: 0;
             background-color: rgba(255, 255, 255, .09);
             font-size: 14px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             color: rgb(161, 161, 161);
             text-align: left;
         }
@@ -44,11 +44,12 @@
             width: 95px;
             background-color: rgb(0, 58, 123);
             font-size: 12px;
-            font-family: "Montserrat SemiBold";
+            font-family: $second-font-family;
+            font-weight: bold;
             letter-spacing: 2px;
             color: rgb(255, 255, 255);
             text-align: center;
-   		    text-transform: uppercase;     
+   		    text-transform: uppercase;
         }
     }
 }

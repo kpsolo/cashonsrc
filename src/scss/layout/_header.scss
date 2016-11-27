@@ -3,83 +3,104 @@
 // -----------------------------------------------------------------------------
 
 /* Website :: Header
-   ========================================================================== */
+========================================================================== */
 
-.header{
-  position: fixed;
-  z-index: 10;
-  top:0;
-  left:0;
-  right:0;
-  padding: 17px 0px;
-  background-color: rgba(7, 14, 25, .369);
-  @media(max-width:$screen-md) {
-    text-align: center;
-  background-color: rgba(7, 14, 25, .0);
-  }
+.header {
+	@include position(fixed, 0 0 null 0);
+	z-index: 10;
+	padding: 17px 0px;
+	background-color: rgba(7, 14, 25, .369);
+	@media(max-width:$screen-md) {
+		text-align: center;
+	}
+	@media(max-width:767px) {
+		position: absolute;
+	}
+}
+
+.nav__toggle {
+	float:right;
+	background-color: transparent;
+	border:0;
+	font-size: 30px;
+	line-height: 53px;
+	height: 53px;
 }
 
 @media(min-width:$screen-md-min) {
-  .nav__toggle {
-    display: none;
-  }
-  .collapse {
-    display:block;
-    height: auto !important;
-  }
+	.nav__toggle {
+		display: none;
+	}
+	.collapse {
+		display:block;
+		height: auto !important;
+	}
 }
 
 .nav__menu {
-  text-align: right;
-  padding-top: 5px;
-  @media(max-width:$screen-md) {
-    text-align: center;
-  }
-  li {
-    display:inline-block;
-    vertical-align:top;
-    @media(max-width:$screen-md) {
-      display:block;
-      width: 100%;
-    }
-    &:hover {
-      border: 0px;
-      border-radius: 25px;
-      background-color: rgb(2, 48, 99);
-    }
-    a {
-      display:block;
-      padding: 12px 14px;
-      font-family:"Montserrat light";
-      font-size:16px;
-      text-decoration: none;
-    }
-    &.login {
-      a {
-        display:block;
-        padding: 14px 24px;
-        font-family:"Montserrat";
-        font-size:12px;
-        &:hover {
-          border: 0px;
-          border-radius: 25px;
-          background-color: rgb(2, 48, 99);
-        } 
-      }
-      
-      background-color: #003a7b;
-      border: 0px;
-      border-radius: 25px;
-      text-transform: uppercase;
-    }
-  }
+	text-align: right;
+	padding-top: 5px;
+	white-space: nowrap;
+	@media(max-width:$screen-md) {
+		text-align: center;
+		white-space: normal;
+		@include position(absolute, 100% 0 null null);
+		background-color: rgba(7, 14, 25, .8);
+		width: 200px;
+		margin-top: 17px;
+		padding: 7px 5px;
+	}
+	@media(max-width:479px) {
+		width: auto;
+		left:-100%;
+	}
+	li {
+		display:inline-block;
+		vertical-align:top;
+		@media(max-width:$screen-md) {
+			display:block;
+			width: 100%;
+		}
+		a, button {
+			display:block;
+			background: none;
+			border:0;
+			border-radius: 25px;
+			padding: 12px 14px;
+			font-family:$second-font-family;
+			font-size: 15px;
+			text-decoration: none;
+			transition: background .3s ease;
+			&:hover, &:focus {
+				background-color: rgb(2, 48, 99);
+			}
+			@media(max-width: $screen-lg) {
+				font-size: 13px;
+			}
+		}
+		&.login {
+			a {
+				font-size: 12px;
+				padding: 14px 24px;
+				text-transform: uppercase;
+				background-color: #003a7b;
+				&:hover, &:focus {
+					background-color: #023063;
+				}
+				@media(max-width: $container-lg) {
+					font-size: 11px;
+				}
+			}
+		}
+	}
 }
+
 .submenu{
-  display: none;
+	display: none;
 }
 
 /*.avatar {
-	@include sprite(logo);
+@include sprite(logo);
 }
 */
 

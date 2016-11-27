@@ -6,14 +6,15 @@
    ========================================================================== */
 .about-h1 {
 	font-size: 14px;
-	font-family: "Montserrat";
+	font-family: $second-font-family;
     color: rgb(0, 133, 189);
 	font-weight: normal;
 }
 
 .about-h2 {
 	font-size: 60px;
-	font-family: "Montserrat semiBold";
+	font-family: $second-font-family;
+    font-weight: bold;
 	color: rgb(251, 251, 251);
 	padding-bottom: 20px;
 }
@@ -61,7 +62,7 @@
             @media(max-width:$screen-md-min) {
                 display:flex;
             }
-        }         
+        }
     }
 }
 
@@ -96,7 +97,8 @@
 
         .main-h2 {
             font-size: 36px;
-            font-family: "Montserrat SemiBold";
+            font-family: $second-font-family;
+            font-weight: bold;
             color: rgb(251, 251, 251);
             text-align: left;
             @media(max-width:$screen-md-min) {
@@ -125,7 +127,7 @@
             padding: 2% auto;
         }
     }
-    
+
 }
 
 .meet-team {
@@ -157,7 +159,7 @@
                 width: 270px;
                 float: left;
                 overflow: hidden;
-                
+
                 &:before {
                     display: block;
                     padding-top: 120%;
@@ -166,7 +168,7 @@
                 &:nth-child(1) {
                     margin-left: 22%;
                 }
-                
+
                 &:nth-child(3) {
                     margin-left: 5%;
                 }
@@ -209,7 +211,7 @@
                 }
             }
 
-            .container { 
+            .container {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -218,7 +220,7 @@
                 display:flex;
                 align-items: center;
                 justify-content: center;
-                flex-direction: column;                
+                flex-direction: column;
                 text-align: center;
                 opacity: 0;
                 -webkit-shape-outside:   polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -230,7 +232,7 @@
                 font-family: "Montserrat";
                 color: rgb(31, 30, 30);
                 text-align: center;
-                
+
                 &:before,
                 &:after {
                     display: inline-block;
@@ -281,10 +283,10 @@
                 .img:before,
                 .img:after,
                 .container { opacity: 1; }
-                
+
               //  .container { transform: translate(-50%, -80%) scale(1); }
             }
 
-        }  
+        }
     }
 }
