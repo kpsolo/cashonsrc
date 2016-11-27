@@ -9,13 +9,26 @@
 	@include position(fixed, 0 0 null 0);
 	z-index: 10;
 	padding: 17px 0px;
-	background-color: rgba(7, 14, 25, .369);
+	background-color: #121d2b;
 	@media(max-width:$screen-md) {
 		text-align: center;
 	}
 	@media(max-width:767px) {
 		position: absolute;
 	}
+}
+
+.home {
+    &-scroll {
+        background-color: transparent;
+        transition: background .3s ease;
+        @media(max-width: 767px) {
+        	background-color: #121d2b;
+        }
+        &-active {
+            background-color: #121d2b;
+        }
+    }
 }
 
 .nav__toggle {
