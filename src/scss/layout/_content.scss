@@ -23,4 +23,28 @@
 .github {
 	@include sprite-png(twitter);
 }*/
+.current-link{
+  position: relative;
+  margin: 0 auto;
+  z-index:1;
+    &:before {
+        content: '';
+        @include position(absolute, 0);
+        background-image: url(/img/slider-1.png);
+        background-position: center 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:0;
+    }
+    &-container {
+        position: relative;
+        padding-top: 100px;
+        height: 380px;
+        z-index: 2;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
 

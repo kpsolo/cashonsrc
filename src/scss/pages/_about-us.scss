@@ -18,31 +18,6 @@
 	padding-bottom: 20px;
 }
 
-.current-link{
-  position: relative;
-  margin: 0 auto;
-  z-index:1;
-    &:before {
-        content: '';
-        @include position(absolute, 0);
-        background-image: url(/img/slider-1.png);
-        background-position: center 60%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index:0;
-    }
-    &-container {
-        position: relative;
-        padding-top: 120px;
-        height: 350px;
-        z-index: 2;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-}
-
 .whoweare {
     background-color: rgb(255, 255, 255);
     background-image: url(/img/bg-whoweare.png);
@@ -170,7 +145,6 @@
             width: 100%;
         }
         .hexgrid{
-///////////////////////////////////////////////////////////////
             .grid {
                 padding: 1% 2%;
                 margin: 0 auto;
@@ -311,7 +285,6 @@
               //  .container { transform: translate(-50%, -80%) scale(1); }
             }
 
-///////////////////////////////////////////////////////////////
         }  
     }
 }
