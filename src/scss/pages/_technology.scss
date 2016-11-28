@@ -140,7 +140,6 @@
 
     a {
         display: inline-block;
-        width: auto;
         width: 360px;
         height: 216px;
         background-position: center 20%;
@@ -154,14 +153,14 @@
         }
         h1 {
             font-size: 18px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             color: rgb(31, 30, 30);
             text-align: center;
             padding: 29% 0 0 0;
         }
         p {
             font-size: 14px;
-            font-family: "Open Sans";
+            font-family: $base-font-family;
             color: rgb(117, 117, 117);
             text-align: center;
             padding: 0 7%;

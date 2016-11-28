@@ -62,7 +62,7 @@
 	text-align: center;
 }
 
-.main-h2, .about-h1 {
+.main-h2, .about-h2 {
 	font-size: 48px;
 	font-family: $second-font-family;
 	color: rgb(31, 30, 30);
@@ -75,6 +75,7 @@
 }
 
 .main-p, .about-p {
+	font-size: 16px;
 	padding: 20px 20px;
 	color: rgb(108, 108, 108);
 	text-align: center;
@@ -126,7 +127,7 @@
 		text-decoration: none;
 		transition: background .3s ease;
 		&:hover, &:focus {
-			background-color: rgb(2, 48, 99);
+			background-color: #023063;
 		}
 	}
 }
