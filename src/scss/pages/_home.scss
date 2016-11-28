@@ -222,6 +222,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     @media(max-width:$screen-md-min) {
         background-size: auto;
         text-align: center;
+        height: 100%;
     }
 
     .photo {
@@ -250,6 +251,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             width: 100%;
             position: relative;
             z-index: 2;
+        padding: 40px 0px 70px 0px;
         }
         .row {
             display: table-row;
@@ -264,7 +266,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             display: table;
             height: 100%;
             margin: 0 auto;
-            width: 75%;
+            width: 90%;
         }
         .links {
             width: 100%;
@@ -316,7 +318,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         width: 40%;
         padding: 5% 0;
         @media(max-width:$screen-md-min) {
-            width: 100%;
+            width: 90%;
         }
 
         .main-h2 {

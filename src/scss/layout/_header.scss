@@ -74,6 +74,7 @@
 			display:block;
 			width: 100%;
 		}
+		
 		a, button {
 			display:block;
 			background: none;
@@ -84,9 +85,11 @@
 			font-size: 15px;
 			text-decoration: none;
 			transition: background .3s ease;
+			
 			&:hover, &:focus {
 				background-color: rgb(2, 48, 99);
 			}
+
 			@media(max-width: $screen-lg) {
 				font-size: 13px;
 			}
@@ -107,9 +110,54 @@
 		}
 	}
 }
+.Rectangle_3124 {
+  background-color: rgb(0, 58, 123);
+  position: absolute;
+  left: 794px;
+  top: 116px;
+  width: 190px;
+  height: 104px;
+  z-index: 43;
+}
 
 .submenu{
 	display: none;
+    position: absolute;
+    min-width: 160px;
+	background-color: rgb(0, 58, 123);
+	padding: 10px 0;
+	margin: 0 0;
+	li {
+		padding: 12px;
+		display:block;
+		text-align: left;
+		display:flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: left;
+		width: 192px;
+		height: 48px;
+		padding: 0 0;
+		margin: 0 0;
+		a {
+			border-radius: 0px;
+			width: 100%;
+			&:hover, &:focus {
+				background-color: rgb(2, 48, 99);
+			}
+
+		}
+	}
+}
+.has-submenu {
+	&:hover .submenu{
+		display: block;
+	}
+	&:hover .has-submenu {
+		background-color: rgb(2, 48, 99);
+	}
+
+
 }
 
 /*.avatar {
