@@ -215,21 +215,24 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 
 .whomakes {
     background-color: rgb(255, 255, 255);
-    background-image: url(/img/whomakes.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
     text-align: left;
     position: relative;
+    display: table;
+    height: 870px;
     @media(max-width:$screen-md-min) {
         background-size: auto;
         text-align: center;
     }
 
     .photo {
-        display: inline-block;
+        display: table-cell;
+        background-image: url(/img/whomakes.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
         vertical-align:top;
         width: 50%;
-        height: 100px;
+        height: 100%;
         @media(max-width: 992px) {
             @include size(auto);
             @include position(absolute, 0);
@@ -237,41 +240,52 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         }
     }
 
-    .text {
-        display: inline-block;
-        vertical-align:top;
-        width: 48%;
-        padding-top: 5%;
+    .content {
+        vertical-align:middle;
+        display: table-cell;
+        padding: 0 0;
+        margin: 0 0;
+        position: relative;
         @media(max-width:$screen-md-min) {
             width: 100%;
             position: relative;
             z-index: 2;
         }
-    }
-    .row {
-        width: 100%;
-        height: auto;
-        vertical-align:bottom;
-        border-width: 1px 0 0 0;
-        border-color: rgb(243, 243, 243);
-        border-style: solid;
-        a {
-            width: 50%;
+        .row {
+            display: table-row;
+            &-absolute {
+                width: 100%;
+                position: absolute;
+                left:15px;
+                bottom:0;
+            }
+        }
+        .text {
+            display: table;
+            height: 100%;
+            margin: 0 auto;
+            width: 75%;
+        }
+        .links {
+            width: 100%;
+            display: table;
+            vertical-align: bottom;
+            border-width: 1px 0 0 0;
+            border-color: rgb(243, 243, 243);
+            border-style: solid;
             height: 68px;
-            display:flex;
-            float: right;
-            justify-content: center;
-            align-items: center;
-            color: rgb(126, 126, 126);
-            font-size: 14px;
-            font-family: $second-font-family;
-            text-transform: uppercase;
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: none;
-
-            &:hover {
-                color: rgb(0, 133, 189);
+            a {
+                height: inherit;
+                display:table-cell;
+                text-align: center;
+                vertical-align: middle;
+                color: rgb(126, 126, 126);
+                font-size: 14px;
+                font-family: $second-font-family;
+                text-transform: uppercase;
+                &:hover {
+                    color: rgb(0, 133, 189);
+                }
             }
         }
     }

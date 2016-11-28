@@ -22,11 +22,14 @@ $text-color: #fbfbfb !default;
 
 $body-bg: rgb(4, 25, 49) !default;
 
-$link-color:            darken(#FFF, 6.5%) !default;
+//$link-color:            darken(#FFF, 6.5%) !default;
+$link-color: #fff !default;
 
-$link-hover-color:      darken($link-color, 15%) !default;
+//$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-color: #fff !default;
 
-$link-hover-decoration: underline !default;
+//$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 //== Img Sprite Source
 

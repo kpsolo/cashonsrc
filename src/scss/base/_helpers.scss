@@ -33,6 +33,12 @@
 	background-position: center;
 	height: 53px;
 	width: 236px;
+	a {
+        width: auto;
+        height: auto;
+        display: block;
+        padding: 26px 118px;
+    }
 }
 
 .center {
@@ -128,6 +134,7 @@
 		transition: background .3s ease;
 		&:hover, &:focus {
 			background-color: #023063;
+			color: rgb(251, 251, 251);
 		}
 	}
 }
