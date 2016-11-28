@@ -42,45 +42,43 @@
 }
 
 .formatads {
+    display: table;
     background-color: rgb(255, 255, 255);
-    background-image: url(/img/bg-ads.png);
-    background-position: center left;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    max-height: 580px;
+    min-height: 800px;
     @media(max-width:$screen-md-min) {
         background-size: cover;
+        min-height: auto;
     }
 
     .photo {
-        display: inline-block;
-        vertical-align:top;
+        display: table-cell;
+        vertical-align:middle;
+        background-image: url(/img/bg-ads.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 50%;
-        height: 100%;
-        max-height: 580px;
         @media(max-width:$screen-md-min) {
-            width: 100%;
-            background-color: rgba(255, 255, 255, .92);
+            display: none;
         }
     }
-
     .text {
+        display: table-cell;
+        vertical-align:middle;
         background-image: url(/img/bg-ads-text.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        display: inline-block;
-        width: 49%;
-        height: 580px;
-        vertical-align:top;
-        padding: 10% 7%;
+        padding: 0 8%;
         @media(max-width:$screen-md-min) {
             background-color: rgba(255, 255, 255, .92);
-            padding: 2% 3%;
-            height: 100%;
+            padding: 10% 5%;
             width: 100%;
         }
 
+        .main-h2 {
+            padding-bottom: 80px;
+        }
         .main-p {
             padding: 20px 0px;
         }
@@ -88,46 +86,44 @@
 }
 
 .gethelp {
+    display: table;
     background-color: rgb(255, 255, 255);
-    background-image: url(/img/bg-gethelp.png);
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    max-height: 580px;
+    min-height: 800px;
     @media(max-width:$screen-md-min) {
         background-size: cover;
+        min-height: auto;
     }
 
     .photo {
-        display: inline-block;
-        vertical-align:top;
+        display: table-cell;
+        vertical-align:middle;
+        background-image: url(/img/bg-gethelp.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 50%;
-        height: 100%;
-        max-height: 580px;
         @media(max-width:$screen-md-min) {
-            width: 100%;
-            background-color: rgba(255, 255, 255, .92);
-            height: 40px;
-        }       
+            display: none;
+        }     
     }
 
     .text {
+        display: table-cell;
+        vertical-align:middle;
         background-image: url(/img/bg-gethelp-text.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        display: inline-block;
-        width: 49%;
-        height: 580px;
-        vertical-align:top;
-        padding: 10% 7%;
+        padding: 0 8%;
         @media(max-width:$screen-md-min) {
             background-color: rgba(255, 255, 255, .92);
-            padding: 2% 3%;
-            height: 100%;
+            padding: 10% 5%;
             width: 100%;
         }
 
+        .main-h2 {
+            padding-bottom: 80px;
+        }
         .main-p {
             padding: 20px 0px;
         }

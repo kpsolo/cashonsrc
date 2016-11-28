@@ -72,30 +72,33 @@
 
 
 .teamof {
+    position: relative;
+    height: 800px;
     background-attachment: fixed;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(/img/bg-teamof.png);
-    position: relative;
     &:before {
         content:'';
         @include position(absolute, 0);
         background-color: rgba(4, 25, 49, .82);
     }
     &-content {
-        padding: 5% 10px;
         position: relative;
+        display: table;
+        height: inherit;
         z-index:1;
-        text-align: center;
     }
-
+    .row {
+        display: table-row;
+    }
     .text {
-        display: inline-block;
-        vertical-align:top;
-        width: 62%;
+        display: table-cell;
+        vertical-align:middle;
+        padding: 0 20%;
         @media(max-width:$screen-md-min) {
-            width: 100%;
+            padding: 0 3%;
         }
 
         .main-h2 {
@@ -103,20 +106,11 @@
             font-family: $second-font-family;
             font-weight: bold;
             color: rgb(251, 251, 251);
-            text-align: left;
-            @media(max-width:$screen-md-min) {
-                text-align: center;
-            }
-            padding: 0px 0px;
+            padding-bottom: 70px;
         }
         .main-p {
             color: rgb(194, 194, 194);
-            text-align: left;
-            padding: 10px 0px;
-            @media(max-width:$screen-md-min) {
-                text-align: center;
-                padding: 10px 5%;
-            }
+            padding: 20px 0px;
         }
 
     }

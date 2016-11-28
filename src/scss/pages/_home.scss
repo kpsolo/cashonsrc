@@ -432,8 +432,10 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             padding: 20px 30px;
             font-size: 12px;
             font-family: $second-font-family;
-            color: rgb(126, 126, 126);
             text-transform: uppercase;
+            a {
+                color: rgb(126, 126, 126);
+            }
        }
         .text-left {
             text-align: left;
