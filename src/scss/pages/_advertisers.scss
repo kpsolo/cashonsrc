@@ -46,7 +46,7 @@
     background-image: url(/img/bg-ads.png);
     background-position: center left;
     background-repeat: no-repeat;
-    background-size: 50% 100%;
+    background-size: 50%;
     max-height: 580px;
     @media(max-width:$screen-md-min) {
         background-size: cover;
@@ -61,7 +61,7 @@
         @media(max-width:$screen-md-min) {
             width: 100%;
             background-color: rgba(255, 255, 255, .92);
-        }       
+        }
     }
 
     .text {
@@ -92,7 +92,7 @@
     background-image: url(/img/bg-gethelp.png);
     background-position: center right;
     background-repeat: no-repeat;
-    background-size: 50% 100%;
+    background-size: 50%;
     max-height: 580px;
     @media(max-width:$screen-md-min) {
         background-size: cover;

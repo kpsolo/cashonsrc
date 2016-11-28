@@ -25,8 +25,8 @@
     background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
-    @media(max-width:$screen-md-min) {
-        background-size: auto;
+    @media(max-width:992px) {
+        background-image: none;
         text-align: center;
     }
 
@@ -35,6 +35,9 @@
         vertical-align:top;
         width: 43%;
         height: 100px;
+        @media(max-width: 992px) {
+            display: none;
+        }
     }
 
     .text {
@@ -146,19 +149,38 @@
         @media(max-width:$screen-md-min) {
             width: 100%;
         }
+        @media(max-width: 479px) {
+            padding: 5% 15px;
+        }
         .hexgrid{
             .grid {
                 padding: 1% 2%;
                 margin: 0 auto;
                 max-width: 1200px;
+                text-align: center;
+                @media(max-width: 479px) {
+                    padding: 0;
+                }
+                &:after {
+                    content:'';
+                    clear:both;
+                    display: table;
+                }
             }
 
             .grid--item {
                 position: relative;
-                margin: 4% 4%;
+                margin: 4%;
                 width: 270px;
                 float: left;
                 overflow: hidden;
+                @media(max-width: 1200px) {
+                    display: inline-block;
+                    float:none;
+                }
+                @media(max-width: 479px) {
+                    margin: 4% 0;
+                }
 
                 &:before {
                     display: block;
@@ -167,18 +189,21 @@
                 }
                 &:nth-child(1) {
                     margin-left: 22%;
+                    @media(max-width: 1200px) {
+                        margin-left:0;
+                    }
                 }
 
                 &:nth-child(3) {
                     margin-left: 5%;
-                }
-                @media(max-width:$screen-md-min) {
-                    &:nth-child(n) {
-                        width: 100%;
-                        margin: 10% auto;
-                        display: block;
+                    @media(max-width: 992px) {
+                        margin-left:4%;
+                    }
+                    @media(max-width: 479px) {
+                        margin-left:0;
                     }
                 }
+
             }
 
             .img {

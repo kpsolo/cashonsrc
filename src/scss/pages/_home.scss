@@ -528,7 +528,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         margin: auto 0;
         padding: 3%;
         text-align: center;
-        a {
+        span {
             position: relative;
             display: inline-block;
             vertical-align:top;
@@ -537,14 +537,8 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             padding: 0;
             width: 200px;
             height: 100px;
-            background-position: center;
-            opacity: 0.6;
+            background-position: center center;
             background-repeat: no-repeat;
-            transition: opacity .3s ease;
-            &:hover {
-                cursor: pointer;
-                opacity: 1;
-            }
         }
         .partner-1 {
             background-image: url(/img/partner-unique-1.png);
