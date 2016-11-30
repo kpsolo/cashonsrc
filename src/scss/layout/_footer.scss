@@ -6,6 +6,11 @@
    ========================================================================== */
 .footer {
     padding-bottom: 40px;
+    @media(max-width: 600px) {
+        .col-xs-6 {
+            width: 100%;
+        }
+    }
     a {
         font-size: 15px;
         display: block;
@@ -17,6 +22,7 @@
     }
 
     .social {
+        white-space: nowrap;
         a {
             font-size: 18px;
             padding: 0px 8px;

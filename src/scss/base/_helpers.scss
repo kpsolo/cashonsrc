@@ -110,20 +110,14 @@
 
 .start-now {
 	width: 100%;
-	height: 100%;
-	padding-top: 40px;
-	display:flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	visibility: visible;
+	padding: 60px 0;
+	text-align: center;
+	@media(max-width: 767px) {
+		padding: 5vh 0;
+	}
 	a {
-		width: 215px;
-		height: 68px;
-		display:flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
+		display: inline-block;
+		padding: 15px 55px;
 		font-family: $second-font-family;
 		font-weight: 600;
 		background-color: rgb(0, 58, 123);
@@ -134,6 +128,9 @@
 		transition: background .3s ease;
 		&:hover, &:focus {
 			background-color: #023063;
+		}
+		@media(max-width: 767px) {
+			padding: 15px 45px;
 		}
 	}
 }

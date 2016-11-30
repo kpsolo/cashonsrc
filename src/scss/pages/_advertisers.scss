@@ -9,16 +9,13 @@
     @media(max-width:$screen-md-min) {
         text-align: center;
     }
-    .content{
-        padding: 3% 15% 8% 15%;
-    }
 
    .text {
         display: inline-block;
         vertical-align:top;
-        padding: 5% 3% 0 0;
+        padding: 80px 0 ;
         @media(max-width:$screen-md-min) {
-            padding: 1% 3%;
+            padding: 40px 0;
         }
         .main-h1 {
             font-size: 30px;
@@ -38,46 +35,43 @@
             font-family: $base-font-family;
             color: rgb(108, 108, 108);
         }
+        .start-now {
+            padding: 30px 0 0;
+        }
     }
 }
 
 .formatads {
-    display: table;
     background-color: rgb(255, 255, 255);
-    min-height: 800px;
     @media(max-width:$screen-md-min) {
         background-size: cover;
-        min-height: auto;
     }
 
     .photo {
-        display: table-cell;
-        vertical-align:middle;
-        background-image: url(/img/bg-ads.png);
+        background-image: url(/img/bg-ads.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 50%;
         @media(max-width:$screen-md-min) {
             display: none;
         }
     }
     .text {
-        display: table-cell;
         vertical-align:middle;
-        background-image: url(/img/bg-ads-text.png);
+        background-image: url(/img/bg-ads-text.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        padding: 0 8%;
+        padding: 80px 8%;
         @media(max-width:$screen-md-min) {
             background-color: rgba(255, 255, 255, .92);
-            padding: 10% 5%;
+            padding: 40px 5%;
             width: 100%;
         }
-
         .main-h2 {
-            padding-bottom: 80px;
+            @media(max-width:1200px) {
+                font-size: rem(44);
+            }
         }
         .main-p {
             padding: 20px 0px;
@@ -86,43 +80,39 @@
 }
 
 .gethelp {
-    display: table;
     background-color: rgb(255, 255, 255);
-    min-height: 800px;
     @media(max-width:$screen-md-min) {
         background-size: cover;
-        min-height: auto;
     }
 
     .photo {
-        display: table-cell;
-        vertical-align:middle;
-        background-image: url(/img/bg-gethelp.png);
+        background-image: url(/img/bg-gethelp.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 50%;
         @media(max-width:$screen-md-min) {
             display: none;
-        }     
+        }
     }
 
     .text {
-        display: table-cell;
         vertical-align:middle;
-        background-image: url(/img/bg-gethelp-text.png);
+        background-image: url(/img/bg-gethelp-text.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
-        padding: 0 8%;
+        padding: 80px 8%;
         @media(max-width:$screen-md-min) {
             background-color: rgba(255, 255, 255, .92);
-            padding: 10% 5%;
+            padding: 40px 5%;
             width: 100%;
+            border-top:1px solid #ddd;
         }
 
         .main-h2 {
-            padding-bottom: 80px;
+            @media(max-width:1200px) {
+                font-size: rem(44);
+            }
         }
         .main-p {
             padding: 20px 0px;

@@ -11,26 +11,26 @@
     }
     .container{
         padding: 5% 0;
+        @media(max-width: 992px) {
+            padding: 5% 15px;
+        }
+        @media(max-width: 767px) {
+            padding: 40px 15px 20px;
+        }
     }
 
     .photo {
-        background-image: url(/img/bg-technology.png);
+        background-image: url(/img/bg-technology.jpg);
         background-position: 40% center;
         background-repeat: no-repeat;
-        background-size: 125%;
-        display: inline-block;
-        vertical-align:top;
-        width: 570px;
-        height: 470px;
+        background-size: cover;
+        @media(max-width: 767px) {
+            display: none
+        }
     }
 
     .text {
-        display: inline-block;
-        vertical-align:top;
-        padding: 5% 3% 0 0;
-        @media(max-width:$screen-md-min) {
-            padding: 1% 3%;
-        }
+        padding: 0 40px 0 15px;
         .main-h1 {
             text-align: left;
         }
@@ -48,30 +48,43 @@
 
 .ourservices {
     background-color: rgb(255, 255, 255);
+    padding: 40px 0 80px;
     @media(max-width:$screen-md-min) {
         background-size: auto;
         text-align: center;
+        padding: 40px 0;
     }
     .container{
-        padding: 5% 0 13% 0;
-        @media(max-width:$screen-md-min) {
+        padding: 0 0 40px;
+        @media(max-width:992px) {
+            padding: 0 15px;
             background-color: rgb(240, 243, 248);
-            padding: 0;
+        }
+        @media(max-width:767px) {
+            padding: 0 30px;
         }
     }
-
+    .col-md-6 {
+        padding: 0;
+        text-align: center;
+        vertical-align: middle;
+    }
     .services {
         background-color: rgb(0, 58, 123);
-        display: inline-block;
-        vertical-align:top;
         z-index: 3;
-        padding: 60px 81px;
-        width: 569px;
-        height: 523px;
+        padding: 60px 80px;
+        @media(max-width: 1200px) {
+            padding: 30px;
+        }
+        @media(max-width:992px) {
+            padding: 30px 20%;
+        }
+        @media(max-width:767px) {
+            padding: 30px 15px;
+        }
+
         @media(max-width:$screen-md-min) {
             text-align: center;
-            width: auto;
-            height: auto;
         }
         a {
             display: inline-block;
@@ -86,35 +99,34 @@
             vertical-align: bottom;
             background-color: rgba(18, 16, 16, .2);
             font-size: 12px;
-            font-family: "Montserrat";
+            font-family: $second-font-family;
             color: rgb(255, 255, 255);
             text-transform: uppercase;
-            text-decoration: none;   
-            // Забрати коли буде файл .svg !!!
+            text-decoration: none;
             &:nth-child(1) {
                background-size: 24%;
-            }       
+            }
         }
     }
 
     .text {
         position: relative;
-        display: inline-block;
-        vertical-align:top;
-        padding: 20% 14%;
+        padding: 20% 40px 20% 100px;
         background-color: rgb(240, 243, 248);
+        width: calc(100% + 55px);
         top: 40px;
         left: -55px;
-        width: 652px;
-        height: 523px;
         z-index: 2;
         @media(max-width:$screen-md-min) {
-            padding: 2% 0;
+            padding: 40px 15% 20px;
             margin: 0 auto;
             top: auto;
-            left: auto;    
+            left: auto;
             width: auto;
             height: auto;
+        }
+        @media(max-width:767px) {
+            padding: 40px 15px 20px;
         }
         .main-p {
             padding: 20px 0px;
@@ -129,9 +141,9 @@
         text-align: center;
     }
     .container{
-        padding: 8% 0 10% 0;
+        padding: 80px 0;
         @media(max-width:$screen-md-min) {
-            padding: 0;
+            padding: 40px 0;
         }
     }
     .main-h2 {
@@ -140,7 +152,6 @@
 
     a {
         display: inline-block;
-        width: 360px;
         height: 216px;
         background-position: center 20%;
         background-size: auto 55px;
@@ -151,12 +162,12 @@
         &:nth-child(even) {
             background-color: rgb(255, 255, 255);
         }
-        h1 {
+        .h1 {
             font-size: 18px;
             font-family: $second-font-family;
             color: rgb(31, 30, 30);
             text-align: center;
-            padding: 29% 0 0 0;
+            padding: 110px 0 0 0;
         }
         p {
             font-size: 14px;

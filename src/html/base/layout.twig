@@ -33,8 +33,8 @@
 					<button class="nav__toggle" data-toggle="collapse" data-target="#nav__menu"><span class="fa fa-bars"></span></button>
 					<ul class="nav__menu collapse" id="nav__menu">
 						<li class="has-submenu">
-							<a href="/" class="has-submenu">Home</a>
-							<ul class ="submenu">
+							<a href="/">Home</a>
+							<ul class="submenu">
 								<li>
 									<a href="#">Goals</a>
 								</li>
@@ -77,42 +77,48 @@
 	<footer class="footer" role="contentinfo">
 {% block footer %}
 		<div class="container footer-p">
-			<div class="col-sm-4">
+			<div class="col-xs-12 col-sm-4">
 				<div class="logo footer-h1"><a href="/"></a></div>
 				<div class="footer-h1">Our Contacts</div>
 				<div class="footer-p">Phone: 0 800 555 77 88</div>
 				<div class="footer-p">E-mail: <a href="mailto:cashon@info.com">cashon@info.com</a></div>
 				<div class="footer-p">Location: NY, 126 Avenue, New York, USA</div>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-xs-6 col-sm-4 col-md-2">
 				<div class="footer-h1">Info</div>
 				<a href="/about-us.html">About Us</a>
 				<a href="/advertisers.html">Advertise</a>
 				<a href="/">Monetise</a>
 				<a href="/contacts.html">Contacts</a>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-xs-6 col-sm-4 col-md-2">
 				<div class="footer-h1">Policies</div>
 				<a href="#">Terms & Conditions</a>
 				<a href="#">Privacy</a>
 				<a href="#">Term Of Use</a>
 				<a href="#">Security</a>
 			</div>
-			<div class="col-sm-4">
-				<div class="footer-h1">Follow us</div>
-				<div class="social">
-					<a href="#" class="g-plus"><span class="fa fa-google-plus"></span></a>
-					<a href="#"><span class="fa fa-twitter"></span></a>
-					<a href="#"><span class="fa fa-facebook"></span></a>
-					<a href="#"><span class="fa fa-instagram"></span></a>
-					<a href="#"><span class="fa fa-pinterest"></span></a>
-					<a href="#"><span class="fa fa-tumblr"></span></a>
+			<div class="col-xs-12 col-sm-8 col-md-4">
+				<div class="row">
+					<div class="col-xs-6 col-sm-6 col-md-12">
+						<div class="footer-h1">Follow us</div>
+						<div class="social">
+							<a href="#" class="g-plus"><span class="fa fa-google-plus"></span></a>
+							<a href="#"><span class="fa fa-twitter"></span></a>
+							<a href="#"><span class="fa fa-facebook"></span></a>
+							<a href="#"><span class="fa fa-instagram"></span></a>
+							<a href="#"><span class="fa fa-pinterest"></span></a>
+							<a href="#"><span class="fa fa-tumblr"></span></a>
+						</div>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-12">
+						<div class="footer-h1">Contact Us</div>
+						<form action="#" class="form">
+							<input type="text" name="e-mail" placeholder="enter your e-mail">
+							<input type="submit" value="Send" class="send">
+						</form>
+					</div>
 				</div>
-				<div class="footer-h1">Contact Us</div>
-					<form action="#" class="form">
-					<input type="text" name="e-mail" placeholder="enter your e-mail">
-					<input type="submit" value="Send" class="send">
-				</form>
 			</div>
 		</div>
 {% endblock %}

@@ -6,17 +6,24 @@
    ========================================================================== */
 .contacts {
     background-color: rgb(255, 255, 255);
-    min-height: 650px;
-    padding: 4% 0 0 0;
     @media(max-width:$screen-md-min) {
         text-align: center;
-        height: 100%;
     }
     .container{
-        padding: 3% 0 0 0;
+        padding: 80px 15px;
+        @media(max-width: 767px) {
+            padding: 40px 15px;
+        }
+    }
+
+    @media(max-width: 992px) {
+        .col-md-8 {
+            margin-top: 40px;
+        }
     }
 
     .main-h2 {
+        font-size: rem(40);
         color: rgb(31, 30, 30);
     }
     .main-p {
@@ -39,6 +46,7 @@
     }
     .social{
         margin-top: 26px;
+        overflow: hidden;
         a {
             font-size: 14px;
             width: 32px;
@@ -88,6 +96,7 @@
             color: rgb(161, 161, 161);
             text-align: left;
             &:hover, &:focus {
+                color: rgb(161, 161, 161);
                 border-color: rgb(0, 134, 192);
             }
         }
@@ -122,6 +131,7 @@
    		    text-transform: uppercase;
             &:hover, &:focus {
 	    		background-color: #023063;
+                color: rgb(251, 251, 251);
     		}
 
         }
