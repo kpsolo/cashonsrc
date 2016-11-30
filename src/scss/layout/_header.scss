@@ -10,6 +10,7 @@
 	z-index: 10;
 	padding: 17px 0px;
 	background-color: #121d2b;
+	opacity: .95;
 	@media(max-width:$screen-md) {
 		text-align: center;
 	}
@@ -74,7 +75,7 @@
 			display:block;
 			width: 100%;
 		}
-		
+
 		a, button {
 			display:block;
 			background: none;
@@ -85,7 +86,7 @@
 			font-size: 15px;
 			text-decoration: none;
 			transition: background .3s ease;
-			
+
 			&:hover, &:focus {
 				background-color: rgb(2, 48, 99);
 			}
@@ -164,5 +165,3 @@
 		display: block;
 	}
 }
-
-
