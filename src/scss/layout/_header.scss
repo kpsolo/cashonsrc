@@ -9,8 +9,7 @@
 	@include position(fixed, 0 0 null 0);
 	z-index: 10;
 	padding: 17px 0px;
-	background-color: #121d2b;
-	opacity: .95;
+	background-color: rgba(18, 29, 43, 0.95);
 	@media(max-width:$screen-md) {
 		text-align: center;
 	}
