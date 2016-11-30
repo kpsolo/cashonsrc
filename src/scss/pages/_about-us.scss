@@ -25,7 +25,7 @@
 .whoweare {
     background-color: rgb(255, 255, 255);
     background-image: url(/img/bg-whoweare.jpg);
-    background-size: 100%;
+    //background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
     @media(max-width:1200px) {
@@ -110,7 +110,7 @@
             padding-bottom: 40px;
         }
         .main-p {
-            color: rgb(194, 194, 194);
+            color: #e7e7e7;
             padding: 10px 0px;
         }
 
@@ -417,4 +417,19 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+#btn {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+	color: #e7e7e7;
+	text-transform: uppercase;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }

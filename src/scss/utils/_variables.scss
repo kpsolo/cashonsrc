@@ -16,7 +16,7 @@ $standart-font-size: rem(12) !default;
 
 $base-line-height: 1.42857 !default;
 
-$base-font-weight: 300 !default;
+$base-font-weight: 400 !default;
 
 $text-color: #fbfbfb !default;
 
@@ -91,4 +91,3 @@ $container-desktop:            (940px + $grid-gutter-width) !default;
 $container-md:                 $container-desktop !default;
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 $container-lg:                 $container-large-desktop !default;
-

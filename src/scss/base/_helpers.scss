@@ -83,11 +83,21 @@
 .main-p, .about-p {
 	font-size: 16px;
 	padding: 20px 20px;
-	color: rgb(108, 108, 108);
+	color: #6c6c6c;
 	text-align: center;
 	@media(max-width: 1200px) {
 		padding: 15px;
 	}
+}
+.max-80ch {
+	max-width: 100ch;
+	margin-left: auto;
+	margin-right: auto;
+}
+.max-60ch {
+	max-width: 80ch;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .footer-h1 {
