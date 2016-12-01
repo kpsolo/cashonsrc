@@ -20,7 +20,7 @@
     }
 
     .photo {
-        background-image: url(/img/bg-technology.jpg);
+        background-image: url($imgPathCss+'/bg-technology.jpg');
         background-position: 40% center;
         background-repeat: no-repeat;
         background-size: cover;

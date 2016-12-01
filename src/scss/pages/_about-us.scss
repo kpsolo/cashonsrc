@@ -24,7 +24,7 @@
 
 .whoweare {
     background-color: rgb(255, 255, 255);
-    background-image: url(/img/bg-whoweare.jpg);
+    background-image: url($imgPathCss+'/bg-whoweare.jpg');
     //background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(/img/bg-teamof.jpg);
+    background-image: url($imgPathCss+'/bg-teamof.jpg');
     &:before {
         content:'';
         @include position(absolute, 0);
@@ -289,13 +289,13 @@
                     }
                 }
                 .email {
-                    background-image: url(/img/close-envelope.svg);
+                    background-image: url($imgPathCss+'/close-envelope.svg');
                 }
                 .skype {
-                    background-image: url(/img/skype.svg);
+                    background-image: url($imgPathCss+'/skype.svg');
                 }
                 .linkedln {
-                    background-image: url(/img/linkedin.svg);
+                    background-image: url($imgPathCss+'/linkedin.svg');
                 }
             }
 
@@ -401,14 +401,14 @@
 .close {
     width: 14px;
     height: 14px;
-    background-image: url(/img/close.svg);
+    background-image: url($imgPathCss+'/close.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #aaa;
     float: right;
     &:hover {
-        background-image: url(/img/close-hover.svg);
+        background-image: url($imgPathCss+'/close-hover.svg');
     }
 }
 

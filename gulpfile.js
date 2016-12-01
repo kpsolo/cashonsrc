@@ -19,6 +19,7 @@ var gulp = require('gulp'),
     mainBowerFiles = require('gulp-main-bower-files'),
     urlAdjuster = require('gulp-css-url-adjuster'),
     gulpFilter = require('gulp-filter'),
+    sassVars = require('gulp-sass-vars'),
     package = require('./package.json');
 
 var finishPath = package.finishPath;
@@ -86,13 +87,56 @@ gulp.task("bower_2", function(){
 
 gulp.task('html', function () {
     return gulp.src('src/html/*.twig')
-    .pipe(twig())
+    .pipe(twig({
+        data: {
+           imgPath: '/img',
+           linkPath: '/' 
+        }
+    }))
+    .pipe(gulp.dest(finishPath))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('html_static', function () {
+    return gulp.src('src/html/*.twig')
+    .pipe(twig({
+        data: {
+           imgPath: 'img',
+           linkPath: ''
+        }
+    }))
     .pipe(gulp.dest(finishPath))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('css', function () {
+    var variables = {
+        imgPathCss: "/img"
+    }
     return gulp.src('src/scss/style.scss')
+    .pipe(sassVars(variables, { verbose: true }))
+    .pipe(sass({
+        includePaths: require("bourbon").includePaths,
+        errLogToConsole: true
+    }))
+    .pipe(autoprefixer('last 4 version'))
+//    .pipe(urlAdjuster({
+//        prependRelative: '../img/',
+//    }))
+    .pipe(gulp.dest(finishPath+'/css'))
+    .pipe(cssnano())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(header(banner, { package : package }))
+    .pipe(gulp.dest(finishPath+'/css'))
+    .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('css_static', function () {
+    var variables = {
+        imgPathCss: "../img"
+    }
+    return gulp.src('src/scss/style.scss')
+    .pipe(sassVars(variables, { verbose: true }))
     .pipe(sass({
         includePaths: require("bourbon").includePaths,
         errLogToConsole: true
@@ -208,6 +252,8 @@ gulp.task('bs-reload', function () {
 });
 
 gulp.task('build', ['bower', 'html', 'images', 'fonts', 'css', 'js']);
+
+gulp.task('build_static', ['bower', 'html_static', 'images', 'fonts', 'css_static', 'js']);
 
 gulp.task('default', ['html', 'images', 'css', 'js', 'browser-sync'], function () {
     gulp.watch("src/scss/*/*.scss", ['css']);

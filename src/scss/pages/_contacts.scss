@@ -70,13 +70,13 @@
                 background-color: rgb(3, 92, 130);
             }
             .email {
-                background-image: url(/img/close-envelope.svg);
+                background-image: url($imgPathCss+'/close-envelope.svg');
             }
             .skype {
-                background-image: url(/img/skype.svg);
+                background-image: url($imgPathCss+'/skype.svg');
             }
             .linkedln {
-                background-image: url(/img/linkedin.svg);
+                background-image: url($imgPathCss+'/linkedin.svg');
             }
         }
     }

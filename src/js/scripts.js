@@ -29,7 +29,7 @@ $('div.links').each(function() {
 
     var img = $active.attr("href");
     img = img.replace(/^#/, '');
-    $('.whomakes > .photo').css("background-image", "url(/img/" + img + ".jpg)");
+    $('.whomakes > .photo').css("background-image", "url(img/" + img + ".jpg)");
 
     $(this).on('click', 'a', function(e) {
         $active.removeClass('active');
@@ -40,7 +40,7 @@ $('div.links').each(function() {
 
         var img = $active.attr("href");
         img = img.replace(/^#/, '');
-        $('.whomakes > .photo').css("background-image", "url(/img/" + img + ".jpg)");
+        $('.whomakes > .photo').css("background-image", "url(img/" + img + ".jpg)");
         $active.addClass('active');
         $content.show();
 
@@ -75,7 +75,7 @@ $('ul.event-list').each(function() {
 });
 
 $(document).ready(function(){
-  $("a").on('click', function(event) {
+  $(".submenu a").on('click', function(event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;

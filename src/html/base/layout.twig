@@ -12,15 +12,15 @@
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon image_src" href="/apple-touch-icon.png">
+	<link rel="shortcut icon" href="{{ linkPath }}favicon.ico">
+	<link rel="apple-touch-icon image_src" href="{{ linkPath }}apple-touch-icon.png">
 
 	<meta property="og:type" content="website" />
 	<meta property="og:image" itemprop="image primaryImageOfPage" content="http://cashon.mobi/apple-touch-icon.png" />
 	<meta property="og:url" content="http://cashon.mobi"/>
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
-	<link href="css/style.min.css" rel="stylesheet">
+	<link href="{{ linkPath }}css/style.min.css" rel="stylesheet">
 {% endblock %}
 </head>
 
@@ -49,22 +49,22 @@
 
 						</li>
 						<li>
-							<a href="/about-us.html">About Us</a>
+							<a href="{{ linkPath }}about-us.html">About Us</a>
 						</li>
 						<li>
-							<a href="/technology.html">Technology</a>
+							<a href="{{ linkPath }}technology.html">Technology</a>
 						</li>
 						<li>
-							<a href="/advertisers.html">Advertisers</a>
+							<a href="{{ linkPath }}advertisers.html">Advertisers</a>
 						</li>
 						<li>
-							<a href="/affiliates.html">Affiliates</a>
+							<a href="{{ linkPath }}affiliates.html">Affiliates</a>
 						</li>
 						<li>
-							<a href="/contacts.html">Contacts</a>
+							<a href="{{ linkPath }}contacts.html">Contacts</a>
 						</li>
 						<li class="login">
-							<a href="/sign-in.html">Sign in</a>
+							<a href="{{ linkPath }}sign-in.html">Sign in</a>
 						</li>
 
 					</ul>
@@ -90,10 +90,10 @@
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-2">
 				<div class="footer-h1">Info</div>
-				<a href="/about-us.html">About Us</a>
-				<a href="/advertisers.html">Advertise</a>
+				<a href="{{ linkPath }}about-us.html">About Us</a>
+				<a href="{{ linkPath }}advertisers.html">Advertise</a>
 				<a href="/">Monetise</a>
-				<a href="/contacts.html">Contacts</a>
+				<a href="{{ linkPath }}contacts.html">Contacts</a>
 			</div>
 			<div class="col-xs-6 col-sm-4 col-md-2">
 				<div class="footer-h1">Policies</div>
@@ -127,7 +127,7 @@
 		</div>
 {% endblock %}
 	</footer>
-	<script src="js/scripts.min.js"></script>
+	<script src="{{ linkPath }}js/scripts.min.js"></script>
 
 </body>
 </html>

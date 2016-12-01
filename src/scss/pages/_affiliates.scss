@@ -17,7 +17,7 @@
     }
 
     .photo {
-        background-image: url(/img/bg-affiliates.jpg);
+        background-image: url($imgPathCss+'/bg-affiliates.jpg');
         background-position: center top;
         background-repeat: no-repeat;
         background-size: contain;
@@ -45,7 +45,7 @@
 
 .affsignup {
     background-attachment: fixed;
-    background-image: url(/img/bg-affiliates-sign.jpg);
+    background-image: url($imgPathCss+'/bg-affiliates-sign.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,7 +135,7 @@
     }
     .aff-item {
         display: inline-block;
-        background-image: url(/img/bg-affiliates-ftr.svg);
+        background-image: url($imgPathCss+'/bg-affiliates-ftr.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;

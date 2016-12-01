@@ -48,7 +48,7 @@
     }
 
     .photo {
-        background-image: url(/img/bg-ads.jpg);
+        background-image: url($imgPathCss+'/bg-ads.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -58,7 +58,7 @@
     }
     .text {
         vertical-align:middle;
-        background-image: url(/img/bg-ads-text.jpg);
+        background-image: url($imgPathCss+'/bg-ads-text.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -86,7 +86,7 @@
     }
 
     .photo {
-        background-image: url(/img/bg-gethelp.jpg);
+        background-image: url($imgPathCss+'/bg-gethelp.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -97,7 +97,7 @@
 
     .text {
         vertical-align:middle;
-        background-image: url(/img/bg-gethelp-text.jpg);
+        background-image: url($imgPathCss+'/bg-gethelp-text.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;

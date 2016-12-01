@@ -10,7 +10,7 @@
     z-index: 1;
     @include p_el(before, null, null) {
         @include position(absolute, 0);
-        background: url(/img/slider-1.jpg) center top no-repeat;
+        background: url($imgPathCss+'/slider-1.jpg') center top no-repeat;
         background-size: cover;
         z-index: 0;
         @media(max-width: 767px) {
@@ -100,7 +100,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             }
         }
         .bg-img {
-            background-image: url(/img/slider-1.jpg);
+            background-image: url($imgPathCss+'/slider-1.jpg');
         }
     }
 }
@@ -108,13 +108,13 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 .features {
     background-color: rgb(240, 243, 248);
     .prem {
-        background-image: url(/img/feature-1.svg);
+        background-image: url($imgPathCss+'/feature-1.svg');
     }
     .prof {
-        background-image: url(/img/feature-2.svg);
+        background-image: url($imgPathCss+'/feature-2.svg');
     }
     .inn {
-        background-image: url(/img/feature-3.svg);
+        background-image: url($imgPathCss+'/feature-3.svg');
     }
     .card {
         z-index: 1;
@@ -169,7 +169,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 
 .maingoal {
     background-color: rgb(240, 243, 248);
-    background-image: url(/img/maingoal.jpg);
+    background-image: url($imgPathCss+'/maingoal.jpg');
     background-repeat: no-repeat;
     background-position: 1vw top;
     @media(max-width: 1440px) {
@@ -228,7 +228,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
     }
     .photo {
         display: table-cell;
-        background-image: url(/img/whomakes.jpg);
+        background-image: url($imgPathCss+'/whomakes.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: top center;
@@ -294,7 +294,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
 
 .signup {
     background-attachment: fixed;
-    background-image: url(/img/bodybg.jpg);
+    background-image: url($imgPathCss+'/bodybg.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -444,7 +444,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             @include p_el(after, 34px, 42px) {
                 @include position(absolute, 0 null 0 null);
                 margin: auto;
-                background-image: url(/img/event-last.svg);
+                background-image: url($imgPathCss+'/event-last.svg');
                 background-size: 34px 42px;
                 background-position: right center;
                 background-origin: border-box;
@@ -453,7 +453,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         }
         .e-next {
             &:after {
-                background-image: url(/img/event-next.svg);
+                background-image: url($imgPathCss+'/event-next.svg');
             }
         }
     }
@@ -526,22 +526,22 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             animation: run 20s linear infinite;
         }
         .partner-1 {
-            background-image: url(/img/partner-unique-1.png);
+            background-image: url($imgPathCss+'/partner-unique-1.png');
         }
         .partner-2 {
-            background-image: url(/img/partner-unique-2.png);
+            background-image: url($imgPathCss+'/partner-unique-2.png');
         }
         .partner-3 {
-            background-image: url(/img/partner-mountain.png);
+            background-image: url($imgPathCss+'/partner-mountain.png');
         }
         .partner-4 {
-            background-image: url(/img/partner-unique-3.png);
+            background-image: url($imgPathCss+'/partner-unique-3.png');
         }
         .partner-5 {
-            background-image: url(/img/partner-strong.png);
+            background-image: url($imgPathCss+'/partner-strong.png');
         }
         .partner-6 {
-            background-image: url(/img/partner-special.png);
+            background-image: url($imgPathCss+'/partner-special.png');
         }
     }
 }

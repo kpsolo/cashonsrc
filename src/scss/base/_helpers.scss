@@ -28,7 +28,7 @@
 	@media(max-width:$screen-md) {
 		display:block;
 	}
-	background-image: url(/img/logo.svg);
+	background-image: url($imgPathCss+'/logo.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 53px;
