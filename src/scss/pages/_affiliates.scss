@@ -73,12 +73,15 @@
         }
 
         .main-h2 {
-            font-size: 48px;
+            font-size: 44px;
             font-family: $second-font-family;
             font-weight: bold;
             color: rgb(251, 251, 251);
             text-align: center;
             padding: 0px 0px;
+            @media(max-width: 767px) {
+                font-size: 28px;
+            }
         }
         .main-p {
             color: #e7e7e7;

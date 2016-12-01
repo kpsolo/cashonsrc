@@ -40,10 +40,10 @@
 							<a href="/">Home</a>
 							<ul class="submenu">
 								<li>
-									<a href="/index.html#maingoal">Goals</a>
+									<a href="{% if linkPath == '' %}index.html{% else %}{{ linkPath }}{% endif %}#maingoal">Goals</a>
 								</li>
 								<li>
-									<a href="/index.html#events">Events</a>
+									<a href="{% if linkPath == '' %}index.html{% else %}{{ linkPath }}{% endif %}#events">Events</a>
 								</li>
 							</ul>
 
@@ -88,18 +88,18 @@
 				<div class="footer-p">E-mail: <a class="inline" href="mailto:cashon@info.com">cashon@info.com</a></div>
 				<div class="footer-p">Location: NY, 126 Avenue, New York, USA</div>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-2 footer-links">
 				<div class="footer-h1">Info</div>
 				<a href="{{ linkPath }}about-us.html">About Us</a>
 				<a href="{{ linkPath }}advertisers.html">Advertise</a>
 				<a href="/">Monetise</a>
 				<a href="{{ linkPath }}contacts.html">Contacts</a>
 			</div>
-			<div class="col-xs-6 col-sm-4 col-md-2">
+			<div class="col-xs-6 col-sm-4 col-md-2 footer-links">
 				<div class="footer-h1">Policies</div>
-				<a href="#">Terms & Conditions</a>
 				<a href="#">Privacy</a>
 				<a href="#">Term Of Use</a>
+				<a href="#">Terms & Conditions</a>
 				<a href="#">Security</a>
 			</div>
 			<div class="col-xs-12 col-sm-8 col-md-4">

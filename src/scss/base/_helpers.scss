@@ -115,6 +115,9 @@
 	color: rgb(0, 133, 189);
 	font-weight: normal;
 	text-align: left;
+	@media(max-width: 479px) {
+		margin: 20px 0;
+	}
 }
 
 .footer-p {

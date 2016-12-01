@@ -31,17 +31,14 @@
 
     .text {
         padding: 0 40px 0 15px;
-        .main-h1 {
-            text-align: left;
-        }
-
-        .main-h2 {
-            text-align: left;
-        }
-
         .main-p {
             padding: 20px 0px;
+        }
+        .main-h1, .main-h2, .main-p  {
             text-align: left;
+            @media(max-width: 992px) {
+                text-align: center;
+            }
         }
     }
 }

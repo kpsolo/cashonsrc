@@ -99,6 +99,9 @@
 			@media(max-width: $screen-lg) {
 				font-size: 13px;
 			}
+			@media(max-width: 992px) {
+				padding: 10px 14px;
+			}
 		}
 		&.login {
 			a {
@@ -142,6 +145,8 @@
 		width: 100%;
 		position: relative;
 		top:auto;
+		display: block;
+		background-color: rgba(0, 58, 123, .4);
 	}
 	li {
 		padding: 12px;
@@ -155,11 +160,18 @@
 		height: 48px;
 		padding: 0 0;
 		margin: 0 0;
+		@media(max-width: 992px) {
+			text-align: center;
+			height: auto;
+		}
 		a {
 			border-radius: 0px;
 			width: 100%;
 			&:hover, &:focus {
 				background-color: rgb(2, 48, 99);
+				@media(max-width: 992px) {
+					background-color: transparent;
+				}
 			}
 
 		}

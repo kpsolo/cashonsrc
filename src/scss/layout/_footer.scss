@@ -15,10 +15,27 @@
         font-size: 15px;
         display: block;
         color: rgb(235, 235, 235);
-        line-height: 2;
+        line-height: 1.5;
+        margin-bottom: 10px;
         &:hover, &:focus {
             color: rgb(0, 133, 189);
         }
+    }
+    &-links {
+        @media(max-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .footer-h1 {
+                width: 100%;
+            }
+            a {
+                width: 47%;
+            }
+        }
+
     }
     a.inline {
         display: inline-block;

@@ -53,22 +53,20 @@
         @media(max-width:$screen-md-min) {
             width: 100%;
         }
-        .main-h1 {
-            text-align: left;
-        }
-
-        .main-h2 {
-            text-align: left;
-        }
-
         .main-p {
             padding: 20px 0px;
-            text-align: left;
         }
         .start-now {
-            text-align: left;
             padding: 30px 0 0;
         }
+        .main-h1, .main-h2, .main-p, .start-now  {
+            text-align: left;
+            @media(max-width: 992px) {
+                text-align: center;
+            }
+        }
+
+
     }
 }
 
@@ -108,6 +106,9 @@
             font-weight: bold;
             color: rgb(251, 251, 251);
             padding-bottom: 40px;
+            @media(max-width: 767px) {
+                padding-bottom: 15px;
+            }
         }
         .main-p {
             color: #e7e7e7;

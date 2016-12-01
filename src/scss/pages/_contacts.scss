@@ -25,6 +25,9 @@
     .main-h2 {
         font-size: rem(40);
         color: rgb(31, 30, 30);
+        @media(max-width: 767px) {
+            font-size: rem(28);
+        }
     }
     .main-p {
         padding: 0;
@@ -41,6 +44,12 @@
             vertical-align:top;
             display: inline-block;
             color: rgb(31, 30, 30);
+        }
+        a {
+            color: rgb(0, 134, 192);
+            &:hover, &:focus {
+                color: rgb(3, 92, 130);
+            }
         }
         
     }

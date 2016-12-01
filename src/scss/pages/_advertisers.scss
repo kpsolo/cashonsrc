@@ -11,8 +11,7 @@
     }
 
    .text {
-        display: inline-block;
-        vertical-align:top;
+        margin: 0 auto;
         padding: 80px 0 ;
         @media(max-width:$screen-md-min) {
             padding: 40px 0;
@@ -25,6 +24,9 @@
             color: rgb(142, 142, 142);
             span {
                 color: rgb(25, 24, 24);
+            }
+            @media(max-width: 479px) {
+                font-size: 20px;
             }
         }
 
@@ -72,6 +74,10 @@
             @media(max-width:1200px) {
                 font-size: rem(44);
             }
+            @media(max-width:767px) {
+                margin-top: 15px;
+                font-size: rem(28);
+            }
         }
         .main-p {
             padding: 20px 0px;
@@ -112,6 +118,10 @@
         .main-h2 {
             @media(max-width:1200px) {
                 font-size: rem(44);
+            }
+            @media(max-width:767px) {
+                margin-top: 15px;
+                font-size: rem(28);
             }
         }
         .main-p {
