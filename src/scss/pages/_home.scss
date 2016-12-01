@@ -431,12 +431,12 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 &.e-last,
                 &.e-next {
                     &:nth-of-type(odd) {
-                        &:after {
+                        a:after {
                             left: -18.5px;
                         }
                     }
                     &:nth-of-type(even) {
-                        &:after {
+                        a:after {
                             left: auto;
                             right: -18.5px;
                         }
@@ -453,7 +453,11 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 padding: 20px 30px;
             }
             a {
-                color: rgb(126, 126, 126);
+                color: #999;
+                transition: color .3s ease;
+                &.active {
+                   color: #003a7b; 
+                }
             }
         }
         .text-left {
@@ -466,18 +470,21 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         .e-last,
         .e-next {
             position: relative;
-            @include p_el(after, 34px, 42px) {
-                @include position(absolute, 0 null 0 null);
-                margin: auto;
-                background-image: url($imgPathCss+'/event-last.svg');
-                background-size: 34px 42px;
-                background-position: right center;
-                background-origin: border-box;
-                background-repeat: no-repeat;
+            a {
+                @include p_el(after, 34px, 42px) {
+                    @include position(absolute, 0 null 0 null);
+                    margin: auto;
+                    background-image: url($imgPathCss+'/event-last.svg');
+                    background-size: 34px 42px;
+                    background-position: right center;
+                    background-origin: border-box;
+                    background-repeat: no-repeat;
+                }
             }
+
         }
         .e-next {
-            &:after {
+            a:after {
                 background-image: url($imgPathCss+'/event-next.svg');
             }
         }
