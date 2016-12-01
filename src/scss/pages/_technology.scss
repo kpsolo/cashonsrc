@@ -31,6 +31,9 @@
 
     .text {
         padding: 0 40px 0 15px;
+        @media(max-width: 992px) {
+            padding: 0 15px;
+        }
         .main-p {
             padding: 20px 0px;
         }
@@ -50,6 +53,9 @@
         background-size: auto;
         text-align: center;
         padding: 40px 0;
+    }
+    @media(max-width: 767px) {
+        padding: 0;
     }
     .container{
         padding: 0 0 40px;
