@@ -38,6 +38,12 @@
 	font-size: 30px;
 	line-height: 53px;
 	height: 53px;
+	@media(max-width: 479px) {
+		font-size: 25px;
+	}
+	&:focus {
+		outline: 0;
+	}
 }
 
 @media(min-width:$screen-md-min) {

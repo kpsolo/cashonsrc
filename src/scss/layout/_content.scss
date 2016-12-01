@@ -27,6 +27,7 @@
   position: relative;
   margin: 0 auto;
   z-index:1;
+  overflow: hidden;
     &:before {
         content: '';
         @include position(absolute, 0);
