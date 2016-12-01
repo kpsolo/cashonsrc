@@ -3,7 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 310 310" style="enable-background:new 0 0 310 310;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#4F87BD;}
+	.st0{fill:#ffffff;}
+	.st0:hover{fill:#4F87BD;}
 </style>
 <g id="XMLID_801_">
 	<path id="XMLID_802_" class="st0" d="M72.2,99.7H9.9c-2.8,0-5,2.2-5,5v199.9c0,2.8,2.2,5,5,5h62.2c2.8,0,5-2.2,5-5V104.7
