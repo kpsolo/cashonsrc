@@ -385,9 +385,8 @@ $hexagon-bg: rgba(7, 14, 25, .369);
         .event-img {
             img {
                 overflow: hidden;
-                width: 11vh;
-                height: 11vh;
-                clip-path: polygon(5vh 0, 10vh 2.5vh, 10vh 7.44vh, 5vh 10vh, 0 7.44vh, 0 2.5vh);
+                height: 78px;
+                clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
             }
         }
     }
