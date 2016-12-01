@@ -243,13 +243,10 @@
                 justify-content: center;
                 flex-direction: column;
                 text-align: center;
-  
+
                 backface-visibility:hidden;
                 background: rgba(rgb(6, 26, 48), 0);
                 transition: background .3s ease;
-                &:hover {
-                   background: rgba(rgb(6, 26, 48), 0.9); 
-                }
             }
 
             h2 {
@@ -272,6 +269,7 @@
                 font-size: 16px;
                 font-family: $base-font-family;
                 color: rgb(132, 132, 132);
+                pointer-events: none;
                 a {
                     width: 42px;
                     height: 42px;
@@ -305,8 +303,29 @@
                 }
             }
 
-            .grid--item:hover {
-                .grid--item__container { opacity: 1; }
+            .grid--item:hover, .grid--item.hover, .grid--item.hover:hover {
+                .grid--item__container {
+                    opacity: 1;
+                }
+                .grid--item__hexagon {
+                    background: rgba(rgb(6, 26, 48), 0.9);
+                    .desc {
+                        pointer-events: auto;
+                    }
+                }
+            }
+            @media(max-width: 992px) {
+                .grid--item:hover {
+                    .grid--item__container {
+                        opacity: 0;
+                    }
+                    .grid--item__hexagon {
+                        background: rgba(rgb(6, 26, 48), 0);
+                        .desc {
+                            pointer-events: none;
+                        }
+                    }
+                }
             }
 
         }
