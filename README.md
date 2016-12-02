@@ -1,7 +1,5 @@
 # CashOnMobi
 
-Repository for website cashonmobi.
-
 Install:
 
  npm install
@@ -17,4 +15,5 @@ Install:
 Generated static content in /app
 
 Start local server:
+
 gulp
