@@ -172,3 +172,39 @@
         }
     }
 }
+
+.thankyou {
+    &__container {
+        @include position(absolute, 0);
+        max-width: 520px;
+        min-height: 320px;
+        @include size(100% 320px);
+        margin: auto;
+        @media(max-width: 600px) {
+            max-width: 330px;
+        }
+        @media(max-width: 350px) {
+            max-width: 300px;
+        }
+    }
+    &__img {
+        @include size(80px 60px);
+        margin: 10px auto 20px;
+        background: url($imgPathCss+'/thankyou.svg') center center no-repeat;
+    }
+    &__title {
+        color: #00377d;
+        font-family: $second-font-family;
+        font-size: 36px;
+        font-weight: 500;
+        margin: 20px 0 10px;
+        text-align: center;
+    }
+    &__text {
+        text-align: center;
+        p {
+            font-size: 16px;
+            color: #6c6c6c;
+        }
+    }
+}

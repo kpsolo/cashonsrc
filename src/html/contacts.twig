@@ -55,7 +55,7 @@
                         <textarea rows="4" name="message" placeholder="Your message"></textarea>
                     </div>
                     <div class="col-sm-12 contacts-submit">
-                            <input type="submit" value="Send Message" class="send">
+                            <input type="submit" value="Send Message" class="send" onClick="document.getElementById('myModal').style.display = 'block';return false;">
                     </div>
                 </form>
             </div>
@@ -63,6 +63,38 @@
      </div>
 </div>
 
+<div id="myModal" class="modal">
+    <div class="modal-content thankyou__container">
+        <div class="modal-header">
+            <span class="close"></span>
+        </div>
+        <div class="modal-body">
+            <div class="thankyou__block">
+                <div class="thankyou__img"></div>
+                <div class="thankyou__title">Thank You!</div>
+                <div class="thankyou__text">
+                    <p>We appreciate that you’ve taken the time to write us.</p>
+                    <p>We’ll get back to you very soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
 
 {% endblock %}
 
