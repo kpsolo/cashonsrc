@@ -88,6 +88,7 @@
 			border-radius: 25px;
 			padding: 12px 14px;
 			font-family:$second-font-family;
+			font-weight: 300;
 			font-size: 15px;
 			text-decoration: none;
 			transition: background .3s ease;
@@ -108,6 +109,7 @@
 				font-size: 12px;
 				padding: 14px 24px;
 				text-transform: uppercase;
+				font-weight: 400;
 				background-color: #003a7b;
 				&:hover, &:focus {
 					background-color: #023063;

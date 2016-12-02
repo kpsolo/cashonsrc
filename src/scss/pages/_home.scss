@@ -78,7 +78,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
             .h2 {
                 font-size: 11vh;
                 font-family: $second-font-family;
-                font-weight: bold;
+                font-weight: 500;
                 color: rgb(251, 251, 251);
                 text-align: center;
                 white-space: nowrap;
@@ -93,6 +93,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 font-size: rem(22);
                 font-family: $second-font-family;
                 color: rgb(251, 251, 251);
+                font-weight: 300;
                 text-align: center;
                 @media(max-width: 767px) {
                     font-size: rem(20);
@@ -402,14 +403,14 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 color:#fff;
                 overflow:hidden;
                 transform: skewY(-30deg) rotate(60deg);
-  
+
                 backface-visibility:hidden;
             }
 
             img {
                 left:-100%; right:-100%;
                 width: auto; height:100%;
-                margin:0 auto; 
+                margin:0 auto;
             }
         }
     }
@@ -456,7 +457,7 @@ $hexagon-bg: rgba(7, 14, 25, .369);
                 color: #999;
                 transition: color .3s ease;
                 &.active {
-                   color: #003a7b; 
+                   color: #003a7b;
                 }
             }
         }
